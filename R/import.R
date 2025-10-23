@@ -13,7 +13,7 @@ lezards <- srename(lezards,
   eel_stl = "loo/lt",
   skull_length_sl = "long_crane",
   sl_stl = "lc/lt",
-  skull_widt_sw = "larg_crane",
+  skull_width_sw = "larg_crane",
   sw_stl = "lac/lt",
   sw_sl = "lac/lc",
   snout_tail_length_stl = "long_tot",
@@ -39,4 +39,4 @@ lezards <- srename(lezards,
 
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
-
+write$rds(lezards, "data/lezards.rds")

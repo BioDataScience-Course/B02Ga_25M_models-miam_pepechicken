@@ -51,7 +51,7 @@ SciViews::R("model")
 
 ```{r import}
 # Lecture des données
-lezards <- read("data/lezards.csv")
+lezards <- read("data/lezards.rds")
 
 # Tableau des premières et dernières lignes
 tabularise$headtail(lezards)
