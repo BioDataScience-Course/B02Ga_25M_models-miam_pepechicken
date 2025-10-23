@@ -36,7 +36,51 @@ lezards <- srename(lezards,
 
 # Etape 4 : Ajout des labels et des unités --------------------------------
 
+lezards <- labelise(lezards,
+  label=list(
+    body_cond = "",
+    circ_base_queue = "Circonférence de la base de la queue",
+    cbq/lt = "Circonférence de la base de la queue/Longueur totale",
+    taille = "Taille",
+    long_oeil_oreille = "Longueur de l'oeil à l'oreille",
+    loo/lc = "Longueur de l'oeil à l'oreille/ Longueur du crâne",
+    loo/lt = "Longueur de l'oeil à l'oreille/Longueur totale",
+    long_crane = "Longueur du crâne",
+    lc/lt = "Longueur du crâne/Longueur totale",
+    larg_crane = "Largeur du crâne",
+    lac/lt = "Largeur du crâne/Longueur totale",
+    lac/lc = "Largeur du crâne/Longueur crâne",
+    long_tot = "Longueur totale",
+    long_sans_queue = "Longueur sans queue",
+    long_queue = "Longueur de la queue",
+    lq/lt = "Longueur queue/Longueur totale",
+    larg_cuisse = "Largeur de la cuisse",
+    lacu/lt = "Largeur de la cuisse/Longueur totale",
+    masse = "Masse",
+    sexe_male0_femelle1 = "Sexe")
+  units = list(
+    body_cond,
+    circ_base_queue,
+    cbq/lt,
+    taille,
+    long_oeil_oreille,
+    loo/lc,
+    loo/lt,
+    long_crane,
+    lc/lt,
+    larg_crane,
+    lac/lt,
+    lac/lc,
+    long_tot,
+    long_sans_queue,
+    long_queue,
+    lq/lt,
+    larg_cuisse,
+    lacu/lt,
+    masse,
+    sexe_male0_femelle1)))
 
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
 write$rds(lezards, "data/lezards.rds")
+
