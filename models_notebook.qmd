@@ -31,6 +31,8 @@ Lien du truc ou on a trouvé les données :
 
 <https://figshare.com/ndownloader/files/44709583>
 
+<https://figshare.com/articles/dataset/Varanus_salavator_morphology_sex_prediction_19_Features_csv/24558595?utm_source=chatgpt.com&file=44709583>
+
 ## Analyses
 
 ```{r setup, include=FALSE}
