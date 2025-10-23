@@ -1,6 +1,6 @@
 ---
 title: "___"
-author: "___, ___, ___, ___"
+author: "Alexia Baire, Camille Spagna, Jeanne Curto, Lou Hallot"
 format:
   html:
     code-fold: true
@@ -27,7 +27,7 @@ bibliography: references.bib
 
 <!--% Indiquez ici d'où viennent les données et aussi quel logiciel (et version) vous utilisez pour les analyses. Inspirez-vous des projets du premier module de SDD II. -->
 
-...Matériel et méthodes...
+<https://figshare.com/ndownloader/files/44709583>
 
 ## Analyses
 
@@ -40,16 +40,18 @@ if (!"tools:tests" %in% search())
 knitr::opts_chunk$set(dev = "ragg_png")
 
 # Configuration de l'environnement
-
+SciViews::R("model")
 ```
 
 <!--% Importez les données que vous aurez préalablement nettoyées, remaniées et labélisées dans le script R nommé `R/import.R`. -->
 
 ```{r import}
 # Lecture des données
-___ <- ___
+lezards <- read("data/lezards.csv")
+# Renommer les variables
+names(lezards) <- c()
 # Tableau des premières et dernières lignes
-tabularise$headtail(___)
+tabularise$headtail(lezards)
 ```
 
 ### Description des données
