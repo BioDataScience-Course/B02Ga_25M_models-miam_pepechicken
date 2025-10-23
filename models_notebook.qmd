@@ -52,8 +52,7 @@ SciViews::R("model")
 ```{r import}
 # Lecture des données
 lezards <- read("data/lezards.csv")
-# Renommer les variables
-names(lezards) <- c()
+
 # Tableau des premières et dernières lignes
 tabularise$headtail(lezards)
 ```
