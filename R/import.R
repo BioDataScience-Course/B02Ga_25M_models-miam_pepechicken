@@ -23,11 +23,33 @@ lezards <- srename(lezards,
   thigh_width_tw = "larg_cuisse",
   tw_stl = "lacu/lt",
   weight = "masse",
-  sex_male_0_female_1 = "sexe_male0_femelle1")
+  sex_male_0_female_1 = "sexe")
   
 
 # Etape 2 : Description brève des données ---------------------------------
 
+#body_cond : masse divisée par la longueur totale (kg^cm)
+#circ_base_queue : circomference de la base de la queue (cm)
+#cbq/lt : circonférence de la base de la queue / longueur totale 
+#taille : taille, longueur de l'individu 
+#long_oeil_oreille : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille (cm)
+#loo/lc : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille / longueur du crâne 
+#loo/lt : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille / longueur totale 
+#long_crane : longueur du museau jusqu'à la base du crâne (cm)
+#lc/lt : longueur du museau jusqu'à la base du crâne / longueur totale 
+#larg_crane : longueur de la partie la plus large du crâne (cm) 
+#lac/lt : longueur de la partie la plus large du crâne / longueur totale 
+#lac/lc : longueur de la partie la plus large du crâne / longueur du crâne
+#long_tot : longueur du museau jusqu'au bout de la queue (cm)
+#long_sans_queue : longueur du museau jusqu'au cloaque (cm)
+#long_queue : longueur de la queue du cloaque jusqu'au bout (cm)
+#lq/lt : longueur de la queue du cloaque jusqu'au bout / longueur du museau jusqu'au cloaque 
+#larg_cuisse : circonférence du milieu de la cuisse (cm)
+#lacu/lt : circonférence du milieu de la cuisse / longueur du museau jusqu'au bout de la queue 
+#masse : masse de l'animal (kg)
+#sexe : male = 0 et femelle = 1
+
+skimr::skim(lezards)
 
 
 # Etape 3 : Nettoyage des données  ----------------------------------------
