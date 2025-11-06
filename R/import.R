@@ -81,15 +81,15 @@ lezards <- labelise(lezards,
     masse = "Masse",
     sexe_male0_femelle1 = "Sexe")
   units = list(
-    body_cond = "kg/cm",
-    circ_base_queue = "cm",
-    long_oeil_oreille = "cm",
-    long_crane = "cm",
-    larg_crane = "cm",
-    long_tot = "cm",
-    long_sans_queue = "cm",
-    long_queue = "cm",
-    larg_cuisse = "cm",
+    bodycond = "kg/cm",
+    circbasequeue = "cm",
+    longoeiloreille = "cm",
+    longcrane = "cm",
+    largcrane = "cm",
+    longtot = "cm",
+    longsansqueue = "cm",
+    longqueue = "cm",
+    largcuisse = "cm",
     masse = "kg")))
 
 
