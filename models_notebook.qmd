@@ -90,7 +90,7 @@ chart(data = lezards, circbasequeue ~ bodycond %col=% sexe) +
 chart(data = lezards, longtot ~ masse %col=% sexe_rec) +
   geom_point() +
   labs(col = "Sexe") +
-  scale_color_viridis_d()
+  scale_color_brewer(palette = "Accent")
 ```
 
 ... interprétation #2...
