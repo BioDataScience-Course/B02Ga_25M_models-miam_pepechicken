@@ -95,7 +95,6 @@ chart(data=lezards, longtot~masse) +
   geom_point()
 ```
 
-
 ... interprétation #3...
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
@@ -180,7 +179,7 @@ chart(data=lezards, longtot~masse) +
 
 ```{r modelelineairegeneraliseet/oumixte1AlexiaetCamille}
 
-```         
+```
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
@@ -189,7 +188,6 @@ chart(data=lezards, longtot~masse) +
 ```{r modelelineairegeneraliseetoumixte1JeanneetLou}
 
 ```
-
 
 ## Conclusion
 
