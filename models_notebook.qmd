@@ -64,18 +64,10 @@ tabularise$headtail(lezards)
 <!--% Chaque étudiant réalise et interprète un graphique pertinent en lien avec le but fixé et les modèles qui seront réalisés. Graphique et interprétation de l'étudiant #1 ci-dessous. -->
 
 ```{r chart1Alexia}
+chart(data = lezards, circbasequeue ~ bodycond %col=% sexe) +
+  geom_point() + 
+  stat_smooth(method = "lm", formula = y ~ x)
 
-  sdrop_na(., skeleton) ->
-  urchin
-chart(data = lezards, skeleton ~ weight %col=% origin) +
-  geom_point() +
-  geom_vline(xintercept = 30, col = "darkgray", lty = 2)
-
-urchin_lm <- lm(data = urchin, skeleton ~ weight * origin, subset = weight >= 30)
-# Voici comment faire le graphique de ce modèle linéaire
-chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
-  geom_point() +
-  stat_smooth(method = "lm", formula = y ~ x) 
 ```
 
 ... interprétation #1...
