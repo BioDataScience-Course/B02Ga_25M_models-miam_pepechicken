@@ -79,7 +79,7 @@ lezards <- labelise(lezards,
     largcuisse = "Largeur de la cuisse",
     lacu_lt = "Largeur de la cuisse/Longueur totale",
     masse = "Masse",
-    sexe = "Sexe")
+    sexe = "Sexe"),
   units = list(
     bodycond = "kg/cm",
     circbasequeue = "cm",
@@ -90,9 +90,8 @@ lezards <- labelise(lezards,
     longsansqueue = "cm",
     longqueue = "cm",
     largcuisse = "cm",
-    masse = "kg")))
+    masse = "kg"))
 
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
 write$rds(lezards, "data/lezards.rds")
-
