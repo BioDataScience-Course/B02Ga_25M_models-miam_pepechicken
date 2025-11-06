@@ -95,9 +95,10 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
 ```{r chart2Camille}
-chart(data = lezards, longtot ~ masse %col=% sexe) +
+chart(data = lezards, longtot ~ masse %col=% sexe_rec) +
   geom_point() +
-  scale_fill_viridis_d()
+  labs(col = "Sexe") +
+  scale_color_viridis_d()
 ```
 
 ... interprétation #2...
