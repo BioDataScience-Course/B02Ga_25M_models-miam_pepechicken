@@ -28,7 +28,7 @@ lezards <- srename(lezards,
 
 # Etape 2 : Description brève des données ---------------------------------
 
-#body_cond : masse divisée par la longueur totale (kg^cm)
+#body_cond : masse divisée par la longueur totale (kg/cm)
 #circ_base_queue : circomference de la base de la queue (cm)
 #cbq/lt : circonférence de la base de la queue / longueur totale 
 #taille : taille, longueur de l'individu 
