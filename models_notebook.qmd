@@ -63,7 +63,7 @@ tabularise$headtail(lezards)
 
 <!--% Chaque étudiant réalise et interprète un graphique pertinent en lien avec le but fixé et les modèles qui seront réalisés. Graphique et interprétation de l'étudiant #1 ci-dessous. -->
 
-```{rchart1Alexia}
+```{r chart1Alexia}
 
   sdrop_na(., skeleton) ->
   urchin
@@ -82,7 +82,7 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
-```{rchart2Camille}
+```{r chart2Camille}
 
 ```
 
@@ -90,15 +90,17 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
-```{rchart3Jeanne}
-
+```{r chart3jeannes}
+chart(data=lezards, longtot~masse) +
+  geom_point()
 ```
+
 
 ... interprétation #3...
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
-```{rchart4Lou}
+```{r chart4Lou}
 
 ```
 
@@ -108,25 +110,25 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Chaque modèle doit être décrit à l'aide d'un graphique et d'un tableau résumant le modèle. Les équations paramétrées de tous les modèles doivent être également présentes. L'analyse des résidus sera réalisée et interprétée pour chaque modèle. -->
 
-```{rmodelisationAlexia}
+```{r modelisationAlexia}
 
 ```
 
 ...interprétation du modèle...
 
-```{rmodelisationCamille}
+```{r modelisationCamille}
 
 ```
 
 ...interprétation du modèle...
 
-```{rmodelisationJeanne}
+```{r modelisationJeanne}
 
 ```
 
 ...interprétation du modèle...
 
-```{rmodelisationLou}
+```{r modelisationLou}
 
 ```
 
@@ -136,11 +138,11 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
-```{rregressionlineaire1AlexiaetCamille}
+```{r regressionlineaire1AlexiaetCamille}
 
 ```
 
-```{rregressionlineaire1JeanneetLou}
+```{r regressionlineaire1JeanneetLou}
 
 ```
 
@@ -148,11 +150,11 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
-```{rregressionlineaire2AlexiaetCamille}
+```{r regressionlineaire2AlexiaetCamille}
 
 ```
 
-```{rregressionlineaire2JeanneetLou}
+```{r regressionlineaire2JeanneetLou}
 
 ```
 
@@ -160,7 +162,7 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{rmodelelineaire1AlexiaetCamille}
+```{r modelelineaire1AlexiaetCamille}
 
 ```
 
@@ -168,7 +170,7 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{rmodelelineaire2JeanneetLou}
+```{r modelelineaire2JeanneetLou}
 
 ```
 
@@ -176,7 +178,7 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-\`\`\`{rModelelineairegeneraliseet/oumixte1AlexiaetCamille}
+```{r modelelineairegeneraliseet/oumixte1AlexiaetCamille}
 
 ```         
 
@@ -184,8 +186,10 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{rModelelineairegeneraliseet/oumixte1JeanneetLou}
+```{r modelelineairegeneraliseetoumixte1JeanneetLou}
+
 ```
+
 
 ## Conclusion
 
