@@ -90,7 +90,7 @@ chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
 
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
-```{r chart3jeannes}
+```{r chart3Jeanne}
 chart(data=lezards, longtot~masse) +
   geom_point()
 ```
