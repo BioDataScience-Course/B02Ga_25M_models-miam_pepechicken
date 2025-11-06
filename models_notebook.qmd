@@ -165,16 +165,15 @@ tabularise$headtail(lezards)
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{rModelelineairegeneraliseet/oumixte1AlexiaetCamille}
+\`\`\`{rModelelineairegeneraliseet/oumixte1AlexiaetCamille}
 
-```
+```         
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
 ```{rModelelineairegeneraliseet/oumixte1JeanneetLou}
-
 ```
 
 ## Conclusion
