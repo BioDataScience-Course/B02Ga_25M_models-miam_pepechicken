@@ -63,7 +63,7 @@ tabularise$headtail(lezards)
 
 <!--% Chaque étudiant réalise et interprète un graphique pertinent en lien avec le but fixé et les modèles qui seront réalisés. Graphique et interprétation de l'étudiant #1 ci-dessous. -->
 
-```{r chart1}
+```{rchart1Alexia}
 
 ```
 
@@ -71,7 +71,7 @@ tabularise$headtail(lezards)
 
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
-```{r chart2}
+```{rchart2Camille}
 
 ```
 
@@ -79,7 +79,7 @@ tabularise$headtail(lezards)
 
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
-```{r chart3}
+```{rchart3Jeanne}
 
 ```
 
@@ -87,7 +87,7 @@ tabularise$headtail(lezards)
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
-```{r chart4}
+```{rchart4Lou}
 
 ```
 
@@ -97,29 +97,85 @@ tabularise$headtail(lezards)
 
 <!--% Chaque modèle doit être décrit à l'aide d'un graphique et d'un tableau résumant le modèle. Les équations paramétrées de tous les modèles doivent être également présentes. L'analyse des résidus sera réalisée et interprétée pour chaque modèle. -->
 
+```{rmodelisationAlexia}
+
+```
+
+...interprétation du modèle...
+
+```{rmodelisationCamille}
+
+```
+
+...interprétation du modèle...
+
+```{rmodelisationJeanne}
+
+```
+
+...interprétation du modèle...
+
+```{rmodelisationLou}
+
+```
+
+...interprétation du modèle...
+
 #### Régression linéaire 1
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
+
+```{rregressionlineaire1AlexiaetCamille}
+
+```
+
+```{rregressionlineaire1JeanneetLou}
+
+```
 
 #### Régression linéaire 2
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
+```{rregressionlineaire2AlexiaetCamille}
+
+```
+
+```{rregressionlineaire2JeanneetLou}
+
+```
+
 #### Modèle linéaire 1
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
+
+```{rmodelelineaire1AlexiaetCamille}
+
+```
 
 #### Modèle linéaire 2
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
+```{rmodelelineaire2JeanneetLou}
+
+```
+
 #### Modèle linéaire généralisé et/ou mixte 1
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
+```{rModelelineairegeneraliseet/oumixte1AlexiaetCamille}
+
+```
+
 #### Modèle linéaire généralisé et/ou mixte 2
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
+
+```{rModelelineairegeneraliseet/oumixte1JeanneetLou}
+
+```
 
 ## Conclusion
 
