@@ -95,4 +95,3 @@ lezards <- labelise(lezards,
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
 write$rds(lezards, "data/lezards.rds")
-
