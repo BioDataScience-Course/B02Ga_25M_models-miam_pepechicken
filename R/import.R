@@ -83,24 +83,15 @@ lezards <- labelise(lezards,
   units = list(
     body_cond = "kg^cm",
     circ_base_queue = "cm",
-    cbq/lt = NA,
     taille = "",
     long_oeil_oreille = "cm",
-    loo/lc = NA,
-    loo/lt = NA,
     long_crane = "cm",
-    lc/lt = NA,
     larg_crane = "cm",
-    lac/lt = NA,
-    lac/lc = NA,
     long_tot = "cm",
     long_sans_queue = "cm",
     long_queue = "cm",
-    lq/lt = NA,
     larg_cuisse = "cm",
-    lacu/lt = NA,
-    masse = "kg",
-    sexe = NA )))
+    masse = "kg")))
 
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
