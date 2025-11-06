@@ -76,9 +76,10 @@ lezards$sexe_rec <- lezards$sexe |>
 ```
 
 ```{r chart1Alexia}
-chart(data = lezards, circbasequeue ~ bodycond %col=% sexe) +
-  geom_point() + 
-  stat_smooth(method = "lm", formula = y ~ x)
+chart(data = lezards, circbasequeue ~ longtot %col=% sexe_rec) +
+  geom_point()+ 
+  stat_smooth(method = "lm", formula = y ~ x)+ 
+  scale_color_brewer(palette = "Accent")
 
 ```
 
@@ -117,30 +118,6 @@ chart(data=lezards, longtot~masse) +
 
 <!--% Chaque modèle doit être décrit à l'aide d'un graphique et d'un tableau résumant le modèle. Les équations paramétrées de tous les modèles doivent être également présentes. L'analyse des résidus sera réalisée et interprétée pour chaque modèle. -->
 
-```{r modelisationAlexia}
-
-```
-
-...interprétation du modèle...
-
-```{r modelisationCamille}
-
-```
-
-...interprétation du modèle...
-
-```{r modelisationJeanne}
-
-```
-
-...interprétation du modèle...
-
-```{r modelisationLou}
-
-```
-
-...interprétation du modèle...
-
 #### Régression linéaire 1
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
@@ -149,17 +126,9 @@ chart(data=lezards, longtot~masse) +
 
 ```
 
-```{r regressionlineaire1JeanneetLou}
-
-```
-
 #### Régression linéaire 2
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
-
-```{r regressionlineaire2AlexiaetCamille}
-
-```
 
 ```{r regressionlineaire2JeanneetLou}
 
