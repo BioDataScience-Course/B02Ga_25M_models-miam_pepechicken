@@ -4,24 +4,24 @@ SciViews::R("model")
 # Etape 1 : Importation des données brutes --------------------------------
 lezards <- read("data/lezards.csv") |> janitor::clean_names()
 lezards <- srename(lezards,
-  body_condition = "body_cond",
-  base_tail_circumference_btc = "circ_base_queue",
-  btc_stl = "cbq/lt",
-  body_size = "taille_relative",
-  eye_to_ear_length_eel = "long_oeil_oreille",
-  eel_skull_length = "loo/lc",
-  eel_stl = "loo/lt",
-  skull_length_sl = "long_crane",
-  sl_stl = "lc/lt",
-  skull_width_sw = "larg_crane",
-  sw_stl = "lac/lt",
-  sw_sl = "lac/lc",
-  snout_tail_length_stl = "long_tot",
-  snout_vent_length_svl = "long_sans_queue",
-  tail_length_tl = "long_queue",
-  tl_stl = "lq/lt",
-  thigh_width_tw = "larg_cuisse",
-  tw_stl = "lacu/lt",
+  body_condition = "bodycond",
+  base_tail_circumference_btc = "circbasequeue",
+  btc_stl = "cbq_lt",
+  body_size = "taillerelative",
+  eye_to_ear_length_eel = "longoeiloreille",
+  eel_skull_length = "loo_lc",
+  eel_stl = "loo_lt",
+  skull_length_sl = "longcrane",
+  sl_stl = "lc_lt",
+  skull_width_sw = "largcrane",
+  sw_stl = "lac_lt",
+  sw_sl = "lac_lc",
+  snout_tail_length_stl = "longtot",
+  snout_vent_length_svl = "longsansqueue",
+  tail_length_tl = "longqueue",
+  tl_stl = "lq_lt",
+  thigh_width_tw = "largcuisse",
+  tw_stl = "lacu_lt",
   weight = "masse",
   sex_male_0_female_1 = "sexe")
   
@@ -29,9 +29,9 @@ lezards <- srename(lezards,
 # Etape 2 : Description brève des données ---------------------------------
 
 #body_cond : masse divisée par la longueur totale (kg/cm)
-#circ_base_queue : circomference de la base de la queue (cm)
+#circ_base_queue : circonférence de la base de la queue (cm)
 #cbq/lt : circonférence de la base de la queue / longueur totale 
-#taille : taille, longueur de l'individu 
+#taille_relative : taille relative
 #long_oeil_oreille : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille (cm)
 #loo/lc : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille / longueur du crâne 
 #loo/lt : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille / longueur totale 
@@ -60,36 +60,36 @@ skimr::skim(lezards)
 
 lezards <- labelise(lezards,
   label=list(
-    body_cond = "",
-    circ_base_queue = "Circonférence de la base de la queue",
-    cbq/lt = "Circonférence de la base de la queue/Longueur totale",
-    taille relative= "Taille relative",
-    long_oeil_oreille = "Longueur de l'oeil à l'oreille",
-    loo/lc = "Longueur de l'oeil à l'oreille/ Longueur du crâne",
-    loo/lt = "Longueur de l'oeil à l'oreille/Longueur totale",
-    long_crane = "Longueur du crâne",
-    lc/lt = "Longueur du crâne/Longueur totale",
-    larg_crane = "Largeur du crâne",
-    lac/lt = "Largeur du crâne/Longueur totale",
-    lac/lc = "Largeur du crâne/Longueur crâne",
-    long_tot = "Longueur totale",
-    long_sans_queue = "Longueur sans queue",
-    long_queue = "Longueur de la queue",
-    lq/lt = "Longueur queue/Longueur totale",
-    larg_cuisse = "Largeur de la cuisse",
-    lacu/lt = "Largeur de la cuisse/Longueur totale",
+    bodycond = "Masse/Longueur totale",
+    circbasequeue = "Circonférence de la base de la queue",
+    cbq_lt = "Circonférence de la base de la queue/Longueur totale",
+    taillerelative = "Taille relative",
+    longoeiloreille = "Longueur de l'oeil à l'oreille",
+    loo_lc = "Longueur de l'oeil à l'oreille/Longueur du crâne",
+    loo_lt = "Longueur de l'oeil à l'oreille/Longueur totale",
+    longcrane = "Longueur du crâne",
+    lc_lt = "Longueur du crâne/Longueur totale",
+    largcrane = "Largeur du crâne",
+    lac_lt = "Largeur du crâne/Longueur totale",
+    lac_lc = "Largeur du crâne/Longueur crâne",
+    longtot = "Longueur totale",
+    longsansqueue = "Longueur sans queue",
+    longqueue = "Longueur de la queue",
+    lq_lt = "Longueur queue/Longueur totale",
+    largcuisse = "Largeur de la cuisse",
+    lacu_lt = "Largeur de la cuisse/Longueur totale",
     masse = "Masse",
-    sexe_male0_femelle1 = "Sexe")
+    sexe = "Sexe")
   units = list(
-    body_cond = "kg/cm",
-    circ_base_queue = "cm",
-    long_oeil_oreille = "cm",
-    long_crane = "cm",
-    larg_crane = "cm",
-    long_tot = "cm",
-    long_sans_queue = "cm",
-    long_queue = "cm",
-    larg_cuisse = "cm",
+    bodycond = "kg/cm",
+    circbasequeue = "cm",
+    longoeiloreille = "cm",
+    longcrane = "cm",
+    largcrane = "cm",
+    longtot = "cm",
+    longsansqueue = "cm",
+    longqueue = "cm",
+    largcuisse = "cm",
     masse = "kg")))
 
 
