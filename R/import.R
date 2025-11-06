@@ -79,7 +79,7 @@ lezards <- labelise(lezards,
     largcuisse = "Largeur de la cuisse",
     lacu_lt = "Largeur de la cuisse/Longueur totale",
     masse = "Masse",
-    sexemale0femelle1 = "Sexe")
+    sexe = "Sexe")
   units = list(
     bodycond = "kg/cm",
     circbasequeue = "cm",
