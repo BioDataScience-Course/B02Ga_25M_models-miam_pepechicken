@@ -29,9 +29,9 @@ lezards <- srename(lezards,
 # Etape 2 : Description brève des données ---------------------------------
 
 #body_cond : masse divisée par la longueur totale (kg/cm)
-#circ_base_queue : circomference de la base de la queue (cm)
+#circ_base_queue : circonférence de la base de la queue (cm)
 #cbq/lt : circonférence de la base de la queue / longueur totale 
-#taille : taille, longueur de l'individu 
+#taille_relative : taille relative
 #long_oeil_oreille : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille (cm)
 #loo/lc : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille / longueur du crâne 
 #loo/lt : longueur à partir de la partie antérieure de l'oeil jusqu'à la partie postérieure de l'oreille / longueur totale 
@@ -60,12 +60,12 @@ skimr::skim(lezards)
 
 lezards <- labelise(lezards,
   label=list(
-    body_cond = "",
+    body_cond = "Masse/Longueur totale",
     circ_base_queue = "Circonférence de la base de la queue",
     cbq/lt = "Circonférence de la base de la queue/Longueur totale",
     taille relative= "Taille relative",
     long_oeil_oreille = "Longueur de l'oeil à l'oreille",
-    loo/lc = "Longueur de l'oeil à l'oreille/ Longueur du crâne",
+    loo/lc = "Longueur de l'oeil à l'oreille/Longueur du crâne",
     loo/lt = "Longueur de l'oeil à l'oreille/Longueur totale",
     long_crane = "Longueur du crâne",
     lc/lt = "Longueur du crâne/Longueur totale",
