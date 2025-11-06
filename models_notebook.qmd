@@ -108,7 +108,21 @@ chart(data=lezards, longtot~masse) +
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
 ```{r chart4Lou}
+#chart(data = lezards, longcrane ~ largcrane %col=% sexe_rec) +
+#  geom_point() +
+#  labs(col = "Sexe") +
+#  scale_colour_brewer(palette = "Accent")
 
+
+
+
+#a <- chart(data = lezards, ~ largcrane %fill=% sexe_rec) +
+#  geom_histogram() 
+
+#b <- chart(data = lezards, ~ longcrane %fill=% sexe_rec) +
+#  geom_histogram()
+
+#combine_charts(list(a, b))
 ```
 
 ... interprétation #4...
