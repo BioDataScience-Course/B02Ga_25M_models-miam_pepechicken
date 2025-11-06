@@ -115,7 +115,7 @@ chart(data = lezards, longtot ~ masse %col=% sexe_rec) +
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
 ```{r chart3Jeanne}
-chart(data=lezards, circbasequeue ~ masse_rec_rec %fill=% masse_rec_rec) +
+chart(data=lezards, longqueue ~ masse_rec_rec %fill=% masse_rec_rec) +
   geom_boxplot(show.legend = FALSE)+
   scale_fill_brewer(palette = "Accent")+
   labs(x = "Masse")
