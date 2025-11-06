@@ -63,6 +63,18 @@ tabularise$headtail(lezards)
 
 <!--% Chaque étudiant réalise et interprète un graphique pertinent en lien avec le but fixé et les modèles qui seront réalisés. Graphique et interprétation de l'étudiant #1 ci-dessous. -->
 
+```{r}
+lezards$sexe <- as.factor(lezards$sexe)
+
+## Recodage de lezards$sexe en lezards$sexe_rec
+lezards$sexe_rec <- lezards$sexe |>
+  fct_recode(
+    "M" = "0",
+    "F" = "1"
+  )
+
+```
+
 ```{r chart1Alexia}
 chart(data = lezards, circbasequeue ~ bodycond %col=% sexe) +
   geom_point() + 
@@ -75,7 +87,9 @@ chart(data = lezards, circbasequeue ~ bodycond %col=% sexe) +
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
 ```{r chart2Camille}
-
+chart(data = lezards, longtot ~ masse %col=% sexe) +
+  geom_point() +
+  scale_fill_viridis_d()
 ```
 
 ... interprétation #2...
