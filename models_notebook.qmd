@@ -65,6 +65,17 @@ tabularise$headtail(lezards)
 
 ```{rchart1Alexia}
 
+  sdrop_na(., skeleton) ->
+  urchin
+chart(data = lezards, skeleton ~ weight %col=% origin) +
+  geom_point() +
+  geom_vline(xintercept = 30, col = "darkgray", lty = 2)
+
+urchin_lm <- lm(data = urchin, skeleton ~ weight * origin, subset = weight >= 30)
+# Voici comment faire le graphique de ce modèle linéaire
+chart(data = sfilter(urchin, weight >= 30), skeleton ~ weight %col=% origin) +
+  geom_point() +
+  stat_smooth(method = "lm", formula = y ~ x) 
 ```
 
 ... interprétation #1...
@@ -165,16 +176,15 @@ tabularise$headtail(lezards)
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{rModelelineairegeneraliseet/oumixte1AlexiaetCamille}
+\`\`\`{rModelelineairegeneraliseet/oumixte1AlexiaetCamille}
 
-```
+```         
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
 ```{rModelelineairegeneraliseet/oumixte1JeanneetLou}
-
 ```
 
 ## Conclusion
