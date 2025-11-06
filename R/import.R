@@ -83,7 +83,6 @@ lezards <- labelise(lezards,
   units = list(
     body_cond = "kg^cm",
     circ_base_queue = "cm",
-    taille = "",
     long_oeil_oreille = "cm",
     long_crane = "cm",
     larg_crane = "cm",
