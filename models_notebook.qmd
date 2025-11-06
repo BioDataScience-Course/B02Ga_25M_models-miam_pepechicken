@@ -135,10 +135,11 @@ chart(data=lezards, circbasequeue ~ masse_rec_rec %fill=% masse_rec_rec) +
 
 
 #a <- chart(data = lezards, ~ largcrane %fill=% sexe_rec) +
-#  geom_histogram() 
+#  geom_histogram() +
+#    labs(fill = "Sexe") 
 
 #b <- chart(data = lezards, ~ longcrane %fill=% sexe_rec) +
-#  geom_histogram()
+#    labs(fill = "Sexe") 
 
 #combine_charts(list(a, b))
 ```
