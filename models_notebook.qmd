@@ -76,9 +76,10 @@ lezards$sexe_rec <- lezards$sexe |>
 ```
 
 ```{r chart1Alexia}
-chart(data = lezards, circbasequeue ~ bodycond %col=% sexe) +
-  geom_point() + 
-  stat_smooth(method = "lm", formula = y ~ x)
+chart(data = lezards, circbasequeue ~ longtot %col=% sexe_rec) +
+  geom_point()+ 
+  stat_smooth(method = "lm", formula = y ~ x)+ 
+  scale_color_brewer(palette = "Accent")
 
 ```
 
