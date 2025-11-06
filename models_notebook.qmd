@@ -73,6 +73,21 @@ lezards$sexe_rec <- lezards$sexe |>
     "F" = "1"
   )
 
+## Recodage de lezards$masse en lezards$masse_rec
+lezards$masse_rec <- cut(lezards$masse,
+  include.lowest = TRUE,
+  right = FALSE,
+  dig.lab = 4,
+  breaks = c(0, 3, 5, 8)
+)
+
+## Recodage de lezards$masse_rec en lezards$masse_rec_rec
+lezards$masse_rec_rec <- lezards$masse_rec |>
+  fct_recode(
+    "Léger" = "[0,3)",
+    "Moyen" = "[3,5)",
+    "Lourd" = "[5,8]"
+  )
 ```
 
 ```{r chart1Alexia}
@@ -105,8 +120,10 @@ chart(data = lezards, longtot ~ masse %col=% sexe) +
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
 ```{r chart3Jeanne}
-chart(data=lezards, longtot~masse) +
-  geom_point()
+chart(data=lezards, circbasequeue ~ masse_rec_rec %fill=% masse_rec_rec) +
+  geom_boxplot(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Accent")+
+  labs(x = "Masse")
 ```
 
 ... interprétation #3...
