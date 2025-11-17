@@ -126,19 +126,18 @@ chart(data=lezards, longqueue ~ masse_rec_rec %fill=% masse_rec_rec) +
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
 ```{r chart4Lou}
-a <- chart(data = lezards, ~ largcrane %fill=% sexe_rec) +
-  geom_histogram() +
+a <- chart(data = lezards, ~ largcrane %fill=% sexe_rec | sexe_rec) +
+  geom_histogram(show.legend = FALSE, bins = 15) +
   ylab("Effectifs") +
-    labs(fill = "Sexe") +
   scale_fill_brewer(palette = "Accent")
 
-b <- chart(data = lezards, ~ longcrane %fill=% sexe_rec) +
-    geom_histogram() +
+b <- chart(data = lezards, ~ longcrane %fill=% sexe_rec | sexe_rec) +
+    geom_histogram(show.legend = FALSE, bins = 15) +
   ylab("Effectifs") +
-    labs(fill = "Sexe") +
   scale_fill_brewer(palette = "Accent")
 
 combine_charts(list(a, b))
+
 ```
 
 ... interprétation #4...
