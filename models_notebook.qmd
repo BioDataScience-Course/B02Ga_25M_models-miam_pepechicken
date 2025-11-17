@@ -114,7 +114,7 @@ B <- chart(data = lezards, longsansqueue ~ masse_rec_rec %fill=% sexe_rec) +
   labs(fill = "Sexe", x = "Masse") +
   scale_fill_brewer(palette = "Accent")
 
-combine_charts(list(A, B))
+combine_charts(list(A, B), common.legend = TRUE)
 ```
 
 ... interprétation #2...
