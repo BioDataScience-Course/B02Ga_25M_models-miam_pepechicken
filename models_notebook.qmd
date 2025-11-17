@@ -104,14 +104,14 @@ chart(data = lezards, circbasequeue ~ longqueue %col=% sexe_rec) +
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
 ```{r chart2Camille}
-A <- chart(data = lezards, longtot ~ masse %fill=% sexe_rec) +
+A <- chart(data = lezards, longtot ~ masse_rec_rec %fill=% sexe_rec) +
   geom_boxplot() +
-  labs(fill = "Sexe") +
+  labs(fill = "Sexe", x = "Masse") +
   scale_fill_brewer(palette = "Accent")
 
-B <- chart(data = lezards, longsansqueue ~ masse %fill=% sexe_rec) +
+B <- chart(data = lezards, longsansqueue ~ masse_rec_rec %fill=% sexe_rec) +
   geom_boxplot() +
-  labs(fill = "Sexe") +
+  labs(fill = "Sexe", x = "Masse") +
   scale_fill_brewer(palette = "Accent")
 
 combine_charts(list(A, B))
