@@ -21,9 +21,9 @@ bibliography: references.bib
 
 <!--% Rédigez une courte introduction de 3 ou 5 phrases qui présente vos données. Ajoutez une phrase de but (que vous remanierez éventuellement en fonction des modèles que vous ajouterez plus tard). Vous pouvez citer la bibliographie en utilisant le formatage Markdown ad hoc et en incluant votre référence au format bibtex dans le fichier references.bib. -->
 
-Au cours de ce projet, l'analyse des Varanus Salvator va être réalisée
+Au cours de ce projet, l'analyse des Varanus Salvator va être réalisée. Le jeu de donnée a été trouvé sur le site [Nature](https://www.nature.com/) dans la section Scientific data. Plus amples informations sur ce jeu de données ont été trouvée au sein de [@alymann2024]
 
-Fichier expliquant notre jeu de donnée : [@alymann2024]
+Le but de ce projet est de voir si il est possible de déterminer le sexe de ces individus en fonction de mesures morphométriques diverses.
 
 ## Matériel et méthodes
 
@@ -93,6 +93,7 @@ lezards$masse_rec_rec <- lezards$masse_rec |>
 ```{r chart1Alexia}
 chart(data = lezards, circbasequeue ~ longqueue %col=% sexe_rec) +
   geom_point()+ 
+  labs(col="Sexe")+
   stat_smooth(method = "lm", formula = y ~ x)+ 
   scale_color_brewer(palette = "Accent")
 
@@ -103,17 +104,17 @@ chart(data = lezards, circbasequeue ~ longqueue %col=% sexe_rec) +
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
 ```{r chart2Camille}
-A <- chart(data = lezards, longtot ~ masse %fill=% sexe_rec) +
+A <- chart(data = lezards, longtot ~ masse_rec_rec %fill=% sexe_rec) +
   geom_boxplot() +
-  labs(fill = "Sexe") +
+  labs(fill = "Sexe", x = "Masse") +
   scale_fill_brewer(palette = "Accent")
 
-B <- chart(data = lezards, longsansqueue ~ masse %fill=% sexe_rec) +
+B <- chart(data = lezards, longsansqueue ~ masse_rec_rec %fill=% sexe_rec) +
   geom_boxplot() +
-  labs(fill = "Sexe") +
+  labs(fill = "Sexe", x = "Masse") +
   scale_fill_brewer(palette = "Accent")
 
-combine_charts(list(A, B))
+combine_charts(list(A, B), common.legend = TRUE)
 ```
 
 ... interprétation #2...
@@ -121,10 +122,11 @@ combine_charts(list(A, B))
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
 ```{r chart3Jeanne}
-chart(data=lezards, longqueue ~ masse_rec_rec %fill=% masse_rec_rec) +
-  geom_boxplot(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Accent")+
-  labs(x = "Masse")
+chart(data=lezards, longqueue ~ masse %col=% sexe_rec) +
+  geom_point() +
+  stat_smooth(method = "lm", formula = y ~ x) +
+  labs(col = "Sexe") +
+  scale_color_brewer(palette = "Accent")
 ```
 
 ... interprétation #3...
