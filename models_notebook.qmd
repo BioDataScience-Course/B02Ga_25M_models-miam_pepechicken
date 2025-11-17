@@ -121,7 +121,7 @@ combine_charts(list(A, B))
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
 ```{r chart3Jeanne}
-chart(data=lezards, circbasequeue ~ masse_rec_rec %fill=% masse_rec_rec) +
+chart(data=lezards, longqueue ~ masse_rec_rec %fill=% masse_rec_rec) +
   geom_boxplot(show.legend = FALSE)+
   scale_fill_brewer(palette = "Accent")+
   labs(x = "Masse")
@@ -132,21 +132,19 @@ chart(data=lezards, circbasequeue ~ masse_rec_rec %fill=% masse_rec_rec) +
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
 ```{r chart4Lou}
-#chart(data = lezards, longcrane ~ largcrane %col=% sexe_rec) +
-#  geom_point() +
-#  labs(col = "Sexe") +
-#  scale_colour_brewer(palette = "Accent")
+a <- chart(data = lezards, ~ largcrane %fill=% sexe_rec) +
+  geom_histogram() +
+  ylab("Effectifs") +
+    labs(fill = "Sexe") +
+  scale_fill_brewer(palette = "Accent")
 
+b <- chart(data = lezards, ~ longcrane %fill=% sexe_rec) +
+    geom_histogram() +
+  ylab("Effectifs") +
+    labs(fill = "Sexe") +
+  scale_fill_brewer(palette = "Accent")
 
-
-
-#a <- chart(data = lezards, ~ largcrane %fill=% sexe_rec) +
-#  geom_histogram() 
-
-#b <- chart(data = lezards, ~ longcrane %fill=% sexe_rec) +
-#  geom_histogram()
-
-#combine_charts(list(a, b))
+combine_charts(list(a, b))
 ```
 
 ... interprétation #4...
