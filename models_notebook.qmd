@@ -91,7 +91,7 @@ lezards$masse_rec_rec <- lezards$masse_rec |>
 ```
 
 ```{r chart1Alexia}
-chart(data = lezards, circbasequeue ~ longtot %col=% sexe_rec) +
+chart(data = lezards, circbasequeue ~ longqueue %col=% sexe_rec) +
   geom_point()+ 
   stat_smooth(method = "lm", formula = y ~ x)+ 
   scale_color_brewer(palette = "Accent")
