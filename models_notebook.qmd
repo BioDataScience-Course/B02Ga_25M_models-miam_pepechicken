@@ -122,10 +122,11 @@ combine_charts(list(A, B))
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
 ```{r chart3Jeanne}
-chart(data=lezards, longqueue ~ masse_rec_rec %fill=% masse_rec_rec) +
-  geom_boxplot(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Accent")+
-  labs(x = "Masse")
+chart(data=lezards, longqueue ~ masse %col=% sexe_rec) +
+  geom_point() +
+  stat_smooth(method = "lm", formula = y ~ x) +
+  labs(col = "Sexe") +
+  scale_color_brewer(palette = "Accent")
 ```
 
 ... interprétation #3...
