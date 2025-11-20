@@ -54,7 +54,30 @@ skimr::skim(lezards)
 
 # Etape 3 : Nettoyage des données  ----------------------------------------
 
+lezards$sexe <- as.factor(lezards$sexe)
 
+## Recodage de lezards$sexe en lezards$sexe_rec
+lezards$sexe_rec <- lezards$sexe |>
+  fct_recode(
+    "M" = "0",
+    "F" = "1"
+  )
+
+## Recodage de lezards$masse en lezards$masse_rec
+lezards$masse_rec <- cut(lezards$masse,
+  include.lowest = TRUE,
+  right = FALSE,
+  dig.lab = 4,
+  breaks = c(0, 3, 5, 8)
+)
+
+## Recodage de lezards$masse_rec en lezards$masse_rec_rec
+lezards$masse_rec_rec <- lezards$masse_rec |>
+  fct_recode(
+    "Léger" = "[0,3)",
+    "Moyen" = "[3,5)",
+    "Lourd" = "[5,8]"
+  )
 
 # Etape 4 : Ajout des labels et des unités --------------------------------
 
@@ -78,8 +101,11 @@ lezards <- labelise(lezards,
     lq_lt = "Longueur queue/Longueur totale",
     largcuisse = "Largeur de la cuisse",
     lacu_lt = "Largeur de la cuisse/Longueur totale",
-    masse = "Masse",
-    sexe = "Sexe"),
+    masse = "Masse1",
+    sexe = "Sexe1",
+    sexe_rec = "Sexe",
+    masse_rec = "Masse2",
+    masse_rec_rec = "Masse"),
   units = list(
     bodycond = "kg/cm",
     circbasequeue = "cm",

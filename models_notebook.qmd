@@ -129,8 +129,6 @@ chart(data=lezards, longtot ~ bodycond %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
-Le graphique montre que la relation entre la condition corporelle (masse/longueur totale) et la longueur totale diffère légèrement entre mâles et femelles de *Varanus salvator*. Les mâles présentent en moyenne une condition corporelle un peu plus élevée pour une même longueur, ce qui reflète leur morphologie plus robuste. Bien que la variabilité soit importante, cette tendance indique que l’indice de condition corporelle peut potentiellement contribuer au sexage des individus.
-
 Le graphique montre que, pour une même condition corporelle, les mâles de *Varanus salvator* tendent à présenter une longueur totale plus élevée que les femelles. Cette différence traduit le dimorphisme sexuel de l’espèce, les mâles étant généralement plus longs. Malgré une variabilité importante, cette tendance suggère que la combinaison longueur–condition corporelle peut constituer un indice utile pour le sexage lorsque les critères externes sont difficiles à distinguer.
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
@@ -171,7 +169,8 @@ combine_charts(list(a, b))
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
 ```{r regressionlineaire2JeanneetLou}
-
+lezards_lm2 <- lm(data=lezards, longcrane ~ largcrane * sexe)
+summary_(lezards_lm2) |> tabularise()
 ```
 
 #### Modèle linéaire 1
