@@ -215,7 +215,11 @@ $$
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
 ```{r modelelineairegraphique1}
-
+chart(data=lezards, circbasequeue ~ masse %col=% sexe_rec) +
+  geom_point()+
+  stat_smooth(method="lm", formula = y ~ x)+
+  scale_color_brewer(palette = "Accent")+
+  labs(x="Masse [Kg]", col = "Sexe")
 ```
 
 ```{r modelelineaire1AlexiaetCamille}
@@ -259,8 +263,16 @@ chart$residuals(lezards_ml2)
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
 ```{r modelelineairegeneraliseet/oumixte1AlexiaetCamille}
-mlg1 <-glm(lezards, sexe_rec ~ longtot + longsansqueue + longqueue + masse, family=binomial)
-summary_(mlg1)
+lezards_mlg1 <-glm(data = lezards, sexe_rec ~ cbq_lt+ + lq_lt+ masse, family=binomial)
+tabularise(summary_(lezards_mlg1))
+```
+
+```{r residualsac1}
+chart(data = lezards,
+  resid(mlg1, type = "pearson") ~ fitted(mlg1) %col=% cbq_lt) +
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  labs(x = "Valeurs ajustées", y = "Résidus de Pearson")
 ```
 
 #### Modèle linéaire généralisé et/ou mixte 2
