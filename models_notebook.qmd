@@ -215,7 +215,11 @@ $$
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
 ```{r modelelineairegraphique1}
-
+chart(data=lezards, circbasequeue ~ masse %col=% sexe_rec) +
+  geom_point()+
+  stat_smooth(method="lm", formula = y ~ x)+
+  scale_color_brewer(palette = "Accent")+
+  labs(x="Masse [Kg]", col = "Sexe")
 ```
 
 ```{r modelelineaire1AlexiaetCamille}
