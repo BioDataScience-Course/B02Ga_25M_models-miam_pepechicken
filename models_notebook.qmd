@@ -241,8 +241,21 @@ $$
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{r modelelineaire2JeanneetLou}
+```{r modelelineairegraphique2}
+chart(data=lezards, longcrane ~ largcrane %col=% sexe_rec) +
+  geom_point()+
+  labs(col="Sexe")+
+  stat_smooth(method = "lm", formula = y ~ x)+ 
+  scale_color_brewer(palette = "Accent")
+```
 
+```{r modelelineaire2JeanneetLou}
+lezards_ml2 <- lm(data = lezards, longcrane ~ largcrane * sexe)
+tabularise(summary_(lezards_ml2))
+```
+
+```{r residuals3}
+chart$residuals(lezards_ml2)
 ```
 
 #### Modèle linéaire généralisé et/ou mixte 1
@@ -258,8 +271,13 @@ tabularise(summary_(lezards_mlg1))
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{r modelelineairegeneraliseetoumixte1JeanneetLou}
+```{r modelelineairegeneralisegraphique2}
 
+```
+
+```{r modelelineairegeneraliseetoumixte1JeanneetLou}
+lezards_mlg2 <- glm(data = lezards, sexe ~ largcrane * longcrane, family = binomial)
+tabularise(summary_(lezards_mlg2))
 ```
 
 ## Conclusion
