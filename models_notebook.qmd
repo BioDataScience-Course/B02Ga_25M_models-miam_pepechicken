@@ -191,10 +191,24 @@ $$
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
-```{r regressionlineaire2JeanneetLou}
-lezards_lm2 <- lm(data=lezards, longcrane ~ largcrane * sexe)
-summary_(lezards_lm2) |> tabularise()
+```{r graphiqueregressionlineaire2}
+chart(data=lezards, longcrane ~ largcrane) +
+  geom_point()+
+  stat_smooth(method="lm", formula = y ~ x)
 ```
+
+```{r regressionlineaire2JeanneetLou}
+lezards_lm2 <- lm(data = lezards, longcrane ~ largcrane)
+tabularise(summary_(lezards_lm2))
+```
+
+```{r {r residuals2}
+chart$residuals(lezards_lm2)
+```
+
+$$
+`r eq__(lezards_lm2, use_coefs = TRUE)`
+$$
 
 #### Modèle linéaire 1
 
