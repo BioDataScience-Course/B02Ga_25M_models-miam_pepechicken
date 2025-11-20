@@ -164,7 +164,7 @@ combine_charts(list(a, b))
 
 Notre graphique était déjà assez pertinent :
 
-```{r graphique}
+```{r regressionlineaire1graphique}
 chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
   geom_point()+ 
   labs(col="Sexe")+
@@ -214,7 +214,7 @@ $$
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{r graphique2}
+```{r modelelineairegraphique1}
 
 ```
 
