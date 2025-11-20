@@ -267,14 +267,6 @@ lezards_mlg1 <-glm(data = lezards, sexe_rec ~ cbq_lt+ + lq_lt+ masse, family=bin
 tabularise(summary_(lezards_mlg1))
 ```
 
-```{r residualsac1}
-chart(data = lezards,
-  resid(mlg1, type = "pearson") ~ fitted(mlg1) %col=% cbq_lt) +
-  geom_point() +
-  geom_hline(yintercept = 0) +
-  labs(x = "Valeurs ajustées", y = "Résidus de Pearson")
-```
-
 #### Modèle linéaire généralisé et/ou mixte 2
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
