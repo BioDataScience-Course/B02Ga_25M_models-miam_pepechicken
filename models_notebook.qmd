@@ -279,10 +279,6 @@ chart(data = lezards,
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{r modelelineairegeneralisegraphique2}
-
-```
-
 ```{r modelelineairegeneraliseetoumixte1JeanneetLou}
 lezards_mlg2 <- glm(data = lezards, sexe ~ largcrane * longcrane, family = binomial)
 tabularise(summary_(lezards_mlg2))
