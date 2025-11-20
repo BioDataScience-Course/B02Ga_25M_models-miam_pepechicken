@@ -214,9 +214,24 @@ $$
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{r modelelineaire1AlexiaetCamille}
+```{r graphique2}
 
 ```
+
+```{r modelelineaire1AlexiaetCamille}
+lezards_ml1 <- lm(data= lezards, circbasequeue ~ (masse + longqueue) * sexe_rec)
+tabularise(summary_(lezards_ml1))
+```
+
+```{r residuals2}
+chart$residuals(lezards_ml1)
+```
+
+Interprétation...
+
+$$
+`r eq__(lezards_ml1, use_coefs = TRUE, coef_digits = 3)`
+$$
 
 #### Modèle linéaire 2
 
