@@ -232,7 +232,8 @@ $$
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
 ```{r modelelineairegeneraliseet/oumixte1AlexiaetCamille}
-
+mlg1 <-glm(lezards, sexe_rec ~ longtot + longsansqueue + longqueue + masse, family=binomial)
+summary_(mlg1)
 ```
 
 #### Modèle linéaire généralisé et/ou mixte 2
