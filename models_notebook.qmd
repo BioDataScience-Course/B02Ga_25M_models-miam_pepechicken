@@ -162,9 +162,30 @@ combine_charts(list(a, b))
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
-```{r regressionlineaire1AlexiaetCamille}
+Notre graphique était déjà assez pertinent :
 
+```{r graphique}
+chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
+  geom_point()+ 
+  labs(col="Sexe")+
+  stat_smooth(method = "lm", formula = y ~ x)+ 
+  scale_color_brewer(palette = "Accent")
 ```
+
+```{r regressionlineaire1AlexiaetCamille}
+lezards_lm1 <- lm(data= lezards, circbasequeue ~ masse + sexe_rec)
+tabularise(summary_(lezards_lm1))
+```
+
+```{r residuals1}
+chart$residuals(lezards_lm1)
+```
+
+Interprétation ...
+
+$$
+`r eq__(lezards_lm1, use_coefs = TRUE)`
+$$
 
 #### Régression linéaire 2
 
