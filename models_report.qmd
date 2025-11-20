@@ -1,6 +1,6 @@
 ---
-title: "___"
-author: "___, ___, ___, ___"
+title: "Critères de sexage de *Varanus salvator*"
+author: "Baire Alexia, Spagna Camille, Curto Jeanne, Hallot Lou"
 format:
   pdf:
     documentclass: report
