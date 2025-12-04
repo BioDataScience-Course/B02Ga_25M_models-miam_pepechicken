@@ -1,5 +1,5 @@
 ---
-title: "Analyses morphométriques de Varanus salvator"
+title: "Analyses morphométriques de *Varanus salvator*"
 author: "Alexia Baire, Camille Spagna, Jeanne Curto, Lou Hallot"
 format:
   html:
@@ -63,40 +63,12 @@ tabularise$headtail(lezards)
 
 <!--% Chaque étudiant réalise et interprète un graphique pertinent en lien avec le but fixé et les modèles qui seront réalisés. Graphique et interprétation de l'étudiant #1 ci-dessous. -->
 
-```{r}
-lezards$sexe <- as.factor(lezards$sexe)
-
-## Recodage de lezards$sexe en lezards$sexe_rec
-lezards$sexe_rec <- lezards$sexe |>
-  fct_recode(
-    "M" = "0",
-    "F" = "1"
-  )
-
-## Recodage de lezards$masse en lezards$masse_rec
-lezards$masse_rec <- cut(lezards$masse,
-  include.lowest = TRUE,
-  right = FALSE,
-  dig.lab = 4,
-  breaks = c(0, 3, 5, 8)
-)
-
-## Recodage de lezards$masse_rec en lezards$masse_rec_rec
-lezards$masse_rec_rec <- lezards$masse_rec |>
-  fct_recode(
-    "Léger" = "[0,3)",
-    "Moyen" = "[3,5)",
-    "Lourd" = "[5,8]"
-  )
-```
-
 ```{r chart1Alexia}
 chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
   geom_point()+ 
   labs(col="Sexe")+
   stat_smooth(method = "lm", formula = y ~ x)+ 
   scale_color_brewer(palette = "Accent")
-
 ```
 
 ... interprétation #1...
