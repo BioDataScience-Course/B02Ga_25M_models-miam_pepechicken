@@ -204,7 +204,13 @@ tabularise(summary_(lezards_lm2))
 chart$residuals(lezards_lm2)
 ```
 
-Interprétation...
+PAS FINI
+
+observe une relation linéaire, plus la largeur du crâne augmente, plus la longueur du crâne augmente. Les points sont relativement proches de la droite, la largeur du crâne explique bien la longueur.
+
+alpha de 2.575 et pente beta de 0.449
+
+beta significatif donc prouve une relation, le R\^2 est de environ 0.756 = bon modèle
 
 $$
 `r eq__(lezards_lm2, use_coefs = TRUE, coefs_digits = 3)`
