@@ -1,5 +1,5 @@
 ---
-title: "Analyses morphométriques de Varanus salvator"
+title: "Analyses morphométriques de *Varanus salvator*"
 author: "Alexia Baire, Camille Spagna, Jeanne Curto, Lou Hallot"
 format:
   html:
