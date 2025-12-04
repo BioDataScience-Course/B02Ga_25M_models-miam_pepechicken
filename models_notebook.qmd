@@ -252,16 +252,26 @@ chart(data=lezards, longcrane ~ largcrane %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
+Interprétation...
+
 ```{r modelelineaire2JeanneetLou}
 lezards_ml2 <- lm(data = lezards, longcrane ~ largcrane * sexe)
 tabularise(summary_(lezards_ml2))
 ```
 
+Interprétation...
+
 ```{r residuals3}
 chart$residuals(lezards_ml2)
 ```
 
-Interprétation...
+Les résidus se répartissent de manière équilibrée et linéaire.
+
+Les résidus suivent une distribution Normale.
+
+Le graphique de la variance des résidus vérifie l'homoscédasticité.
+
+Aucune valeur n’influence trop fortement la régression linéaire.
 
 $$
 `r eq__(lezards_ml2, use_coefs = TRUE, coefs_digits = 3)`
