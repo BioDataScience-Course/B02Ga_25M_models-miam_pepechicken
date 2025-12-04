@@ -156,7 +156,7 @@ tabularise(summary_(lezards_lm1_1))
 Tous les paramètres sont significativement différents de 0 au seuil alpha de 5%. Le $R^2$ est de 0,62 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
 
 ```{r residuals1}
-chart$residuals(lezards_lm1)
+chart$residuals(lezards_lm1_1)
 ```
 
 Les résidus sont importants par rapport à la plage de valeurs prédites. La linéarité est relativement bien respectée malgré la présence d'une valeur extrême.
@@ -234,6 +234,11 @@ tabularise(summary_(lezards_ml1))
 ```
 
 Les paramètres $\alpha$, $\beta_1$ et $\beta_2$ sont significativement différents de 0 au seuil $\alpha$ de 5%, tandis que les paramètres $\beta_3$, $\beta_4$ et $\beta_5$ ne le sont pas. Le $R^2$ est de 0,64 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
+
+```{r}
+lezards_ml1_ <- lm(data= lezards, circbasequeue ~ masse + longqueue + sexe_rec)
+tabularise(summary_(lezards_ml1_))
+```
 
 ```{r residuals2}
 chart$residuals(lezards_ml1)
