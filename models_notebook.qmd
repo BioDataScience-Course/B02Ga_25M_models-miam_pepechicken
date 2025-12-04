@@ -152,7 +152,7 @@ chart$residuals(lezards_lm1)
 Interprétation ...
 
 $$
-`r eq__(lezards_lm1, use_coefs = TRUE)`
+`r eq__(lezards_lm1, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Régression linéaire 2
