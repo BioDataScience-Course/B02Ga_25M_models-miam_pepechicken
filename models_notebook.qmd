@@ -281,7 +281,7 @@ $$
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
 ```{r modelelineairegeneraliseet/oumixte1AlexiaetCamille}
-lezards_mlg1 <-glm(data = lezards, sexe_rec ~ cbq_lt+ + lq_lt+ masse, family=binomial)
+lezards_mlg1 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt + masse, family=binomial)
 tabularise(summary_(lezards_mlg1))
 ```
 
