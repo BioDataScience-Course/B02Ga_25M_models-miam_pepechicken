@@ -206,6 +206,8 @@ tabularise(summary_(lezards_lm2))
 chart$residuals(lezards_lm2)
 ```
 
+Interprétation...
+
 $$
 `r eq__(lezards_lm2, use_coefs = TRUE)`
 $$
@@ -257,6 +259,12 @@ tabularise(summary_(lezards_ml2))
 ```{r residuals3}
 chart$residuals(lezards_ml2)
 ```
+
+Interprétation...
+
+$$
+`r eq__(lezards_ml2, use_coefs = TRUE, coefs_digits = 3)`
+$$
 
 #### Modèle linéaire généralisé et/ou mixte 1
 
