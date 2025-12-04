@@ -249,7 +249,7 @@ chart$residuals(lezards_ml1)
 Interprétation...
 
 $$
-`r eq__(lezards_ml1, use_coefs = TRUE, coef_digits = 3)`
+`r eq__(lezards_ml1, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Modèle linéaire 2
