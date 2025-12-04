@@ -89,7 +89,7 @@ B <- chart(data = lezards, longsansqueue ~ masse_rec_rec %fill=% sexe_rec) +
 combine_charts(list(A, B), common.legend = TRUE)
 ```
 
-... interprétation #2...
+Pour une même masse, les mâles de *Varanus salvator* tendent à avoir une longueur totale plus élevée que les femelles, même si pour une masse légère, les mâles et les femelles ont une longueur totale similaire. À propos des longueurs sans la queue, la différence entre les longueurs sans queue des mâles et des femelles est beaucoup moins importante. Ceci montre que la différence de taille entre les différents sexes est surtout présente au niveau de la longueur de la queue.
 
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
