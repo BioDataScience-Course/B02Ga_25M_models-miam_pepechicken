@@ -71,7 +71,7 @@ chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
-... interprétation #1...
+Le graphique montre que la circonférence de la base de la queue augmente avec la masse chez les deux sexes (mâle et femelle). Les points représentant les mâles sont globalement situés plus haut que ceux représentant les femelles pour une même masse. De même, la ligne de régression associée aux mâles reste au-dessus de celle des femelles sur l’ensemble des valeurs, indiquant que les mâles présentent des circonférences de base de queue plus élevées que les femelles dans cet échantillon. Il y a également un chevauchement entre les deux nuages de points, ainsi qu’une certaine dispersion des valeurs dans chaque groupe.
 
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
@@ -89,7 +89,7 @@ B <- chart(data = lezards, longsansqueue ~ masse_rec_rec %fill=% sexe_rec) +
 combine_charts(list(A, B), common.legend = TRUE)
 ```
 
-... interprétation #2...
+Pour une même masse, les mâles de *Varanus salvator* tendent à avoir une longueur totale plus élevée que les femelles, même si pour une masse légère, les mâles et les femelles ont une longueur totale similaire. À propos des longueurs sans la queue, la différence entre les longueurs sans queue des mâles et des femelles est beaucoup moins importante. Ceci montre que la différence de taille entre les différents sexes est surtout présente au niveau de la longueur de la queue.
 
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
