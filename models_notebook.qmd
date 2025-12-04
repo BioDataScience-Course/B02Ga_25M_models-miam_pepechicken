@@ -148,6 +148,8 @@ combine_charts(list(a, b))
 
 ```
 
+A FAIRE
+
 -Globalement, largeur et longueur du crâne des Vanarus salvator diffèrent entre les individus mâles et femelles
 
 -femelles ont des valeurs plus basses d'au moins 1 centimètre par rapport aux mâles dans les 2 variables
