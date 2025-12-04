@@ -162,7 +162,7 @@ Les résidus sont importants par rapport à la plage de valeurs prédites. La li
 
 Les résidus ont une distribution qui ne diffère pas trop de la Normale sauf aux extrémités.
 
-Il y a homoscedasticité des résidus. Et toujours la présence d'une valeur extrême.
+Il y a homoscédasticité des résidus. Et toujours la présence d'une valeur extrême.
 
 Un point a un effet de levier important ainsi qu'une distance de Cook importante ce qui influence le modèle.
 
