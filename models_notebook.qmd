@@ -195,7 +195,7 @@ chart$residuals(lezards_lm2)
 
 Les résidus se répartissent de manière équilibrée et linéaire.
 
-Les résidus suivent une distribution normale.
+Les résidus suivent une distribution Normale.
 
 Le graphique de la variance des résidus vérifie l'homoscédasticité.
 
