@@ -145,14 +145,14 @@ lezards_lm1 <- lm(data= lezards, circbasequeue ~ masse * sexe_rec)
 tabularise(summary_(lezards_lm1))
 ```
 
-Ce modèle est trop complexe car on voit que bêta 2 et bêta 3 ne sont pas significativement différents de O au seuil alpha de 5%. Nous allons donc tenter de le simplifier.
+Ce modèle est trop complexe car on voit que $\beta_2$ .  et bêta 3 ne sont pas significativement différents de O au seuil alpha de 5%. Nous allons donc tenter de le simplifier.
 
 ```{r regressionlineaire1AlexiaetCamille1}
 lezards_lm1_1 <- lm(data= lezards, circbasequeue ~ masse + sexe_rec)
 tabularise(summary_(lezards_lm1_1))
 ```
 
-Tous les paramètres sont significativement différents de 0 au seuil alpha de 5%. Le R\^2 est de 0,62 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
+Tous les paramètres sont significativement différents de 0 au seuil alpha de 5%. Le $R^2$ est de 0,62 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
 
 ```{r residuals1}
 chart$residuals(lezards_lm1)
