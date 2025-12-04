@@ -1,5 +1,5 @@
 ---
-title: "___"
+title: "Analyses morphométriques de Varanus salvator"
 author: "Alexia Baire, Camille Spagna, Jeanne Curto, Lou Hallot"
 format:
   html:
@@ -217,11 +217,19 @@ $$
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
 ```{r modelelineairegraphique1}
-chart(data=lezards, circbasequeue ~ masse %col=% sexe_rec) +
+a <- chart(data=lezards, circbasequeue ~ masse %col=% sexe_rec) +
   geom_point()+
   stat_smooth(method="lm", formula = y ~ x)+
   scale_color_brewer(palette = "Accent")+
   labs(x="Masse [Kg]", col = "Sexe")
+
+b <- chart(data=lezards, circbasequeue ~ longqueue %col=% sexe_rec) +
+  geom_point()+
+  stat_smooth(method="lm", formula = y ~ x)+
+  scale_color_brewer(palette = "Accent")+
+  labs(col = "Sexe")
+
+combine_charts(list(a, b), common.legend = TRUE)
 ```
 
 ```{r modelelineaire1AlexiaetCamille}
