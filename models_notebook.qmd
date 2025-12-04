@@ -132,8 +132,6 @@ Ainsi les femelles ont en moyenne un crâne légèrement plus petit que les mâl
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
-Notre graphique était déjà assez pertinent :
-
 ```{r regressionlineaire1graphique}
 chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
   geom_point()+ 
@@ -142,16 +140,25 @@ chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
+Le graphique montre que la circonférence de la base de la queue augmente avec la masse chez les deux sexes (mâle et femelle). Les points représentant les mâles sont globalement situés plus haut que ceux représentant les femelles pour une même masse. De même, la ligne de régression associée aux mâles reste au-dessus de celle des femelles sur l’ensemble des valeurs, indiquant que les mâles présentent des circonférences de base de queue plus élevées que les femelles dans cet échantillon. Il y a également un chevauchement entre les deux nuages de points, ainsi qu’une certaine dispersion des valeurs dans chaque groupe.
+
 ```{r regressionlineaire1AlexiaetCamille}
-lezards_lm1 <- lm(data= lezards, circbasequeue ~ masse + sexe_rec)
+lezards_lm1 <- lm(data= lezards, circbasequeue ~ masse * sexe_rec)
 tabularise(summary_(lezards_lm1))
 ```
+
+Ce modèle est trop complexe car on voit que bêta 2 et bêta 3 ne sont pas significativement différents de O au seuil alpha de 5%. Nous allons donc tenter de le simplifier.
+
+```{r regressionlineaire1AlexiaetCamille1}
+lezards_lm1_1 <- lm(data= lezards, circbasequeue ~ masse + sexe_rec)
+tabularise(summary_(lezards_lm1_1))
+```
+
+Tous les paramètres sont significativement différents de 0 au seuil alpha de 5%. Le R\^2 est de 0,62 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle-le est significatif.
 
 ```{r residuals1}
 chart$residuals(lezards_lm1)
 ```
-
-Interprétation ...
 
 $$
 `r eq__(lezards_lm1, use_coefs = TRUE)`
