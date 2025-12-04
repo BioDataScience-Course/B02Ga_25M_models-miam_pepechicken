@@ -101,7 +101,7 @@ chart(data=lezards, longtot ~ bodycond %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
-Le graphique montre que, pour une même condition corporelle, les mâles de *Varanus salvator* tendent à présenter une longueur totale plus élevée que les femelles. Cette différence traduit le dimorphisme sexuel de l’espèce, les mâles étant généralement plus longs. Malgré une variabilité importante, cette tendance suggère que la combinaison longueur–condition corporelle peut constituer un indice utile pour le sexage.
+Sur le graphique on peut voir que lorsque que la longueur totale augmente, le ratio masse/longueur totale augmente aussi chez les deux sexes. Les valeurs pour mâles apparaissent légèrement plus élevées que celles des femelles pour des longueurs similaires, et leur ligne de tendance reste un peu au-dessus. Cela suggère que les mâles ont en moyenne un ratio légèrement supérieur.
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
