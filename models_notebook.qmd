@@ -180,24 +180,26 @@ chart(data=lezards, longcrane ~ largcrane) +
   stat_smooth(method="lm", formula = y ~ x)
 ```
 
+Une relation linéaire est observée, les points sont relativement proches de la droite. Plus la largeur du crâne augmente, plus la longueur du crâne augmente.
+
 ```{r regressionlineaire2JeanneetLou}
 lezards_lm2 <- lm(data = lezards, longcrane ~ largcrane)
 tabularise(summary_(lezards_lm2))
 ```
 
+La valeur de l’ordonnée à l’origine et de la pente sont significativement différentes de zéro au seuil alpha de 5%. Le R\^2 est d'environ 0.76, traduisant un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0.05, indique que le modèle est significatif.
+
 ```{r {r residuals2}
 chart$residuals(lezards_lm2)
 ```
 
-PAS FINI
+Les résidus se répartissent de manière équilibrée et linéaire.
 
-On observe une relation linéaire, plus la largeur du crâne augmente, plus la longueur du crâne augmente. Les points sont relativement proches de la droite, la largeur du crâne explique bien la longueur.
+Les résidus suivent une distribution Normale.
 
-alpha de 2.575 et pente beta de 0.449
+Le graphique de la variance des résidus vérifie l'homoscédasticité.
 
-le R\^2 est de environ 0.756 = bon modèle
-
-Distribution des résidus linéaire, les résidus semblent suivre une distribution Normale, la variance des résidus indique une homoscédasticité, pas de valeurs extrèmes
+Aucune valeur n’influence trop fortement la régression linéaire.
 
 $$
 `r eq__(lezards_lm2, use_coefs = TRUE, coefs_digits = 3)`
