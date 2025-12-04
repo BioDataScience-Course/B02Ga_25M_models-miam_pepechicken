@@ -101,7 +101,7 @@ chart(data=lezards, longtot ~ bodycond %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
-Le graphique montre que, pour une même condition corporelle, les mâles de *Varanus salvator* tendent à présenter une longueur totale plus élevée que les femelles. Cette différence traduit le dimorphisme sexuel de l’espèce, les mâles étant généralement plus longs. Malgré une variabilité importante, cette tendance suggère que la combinaison longueur–condition corporelle peut constituer un indice utile pour le sexage lorsque les critères externes sont difficiles à distinguer.
+Le graphique montre que, pour une même condition corporelle, les mâles de *Varanus salvator* tendent à présenter une longueur totale plus élevée que les femelles. Cette différence traduit le dimorphisme sexuel de l’espèce, les mâles étant généralement plus longs. Malgré une variabilité importante, cette tendance suggère que la combinaison longueur–condition corporelle peut constituer un indice utile pour le sexage.
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
@@ -273,6 +273,10 @@ tabularise(summary_(lezards_mlg2))
 $$
 `r eq__(lezards_mlg2, use_coefs = TRUE, coefs_digits = 3)`
 $$
+
+```{r AIC}
+AIC(lezards_lm1, lezards_lm2, lezards_ml1, lezards_ml2, lezards_mlg1, lezards_mlg1_, lezards_mlg2)
+```
 
 ## Conclusion
 
