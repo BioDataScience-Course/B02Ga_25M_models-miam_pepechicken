@@ -120,9 +120,7 @@ combine_charts(list(a, b))
 
 ```
 
-La largeur et longueur du crâne des Vanarus salvator diffèrent entre les individus mâles et femelles : les mâles semblent avoir une largeur de crâne globalement centrée autour d’une valeur plus élevée que les femelles, qui présentent des valeurs plus basses d'au moins 1 centimètre dans les 2 variables.
-
-Ainsi les femelles ont en moyenne un crâne légèrement plus petit que les mâles, même si la variation reste importante dans les deux sexes.
+La largeur et longueur du crâne des *Vanarus salvator* diffèrent entre les individus mâles et femelles : les mâles semblent avoir une largeur de crâne globalement centrée autour d’une valeur plus élevée que les femelles, qui présentent des valeurs plus basses d'au moins 1 centimètre dans les 2 variables. Ainsi les femelles ont en moyenne un crâne légèrement plus petit que les mâles, même si la variation reste importante dans les deux sexes.
 
 ### Modélisation
 
@@ -178,11 +176,13 @@ chart$residuals(lezards_lm2)
 
 PAS FINI
 
-observe une relation linéaire, plus la largeur du crâne augmente, plus la longueur du crâne augmente. Les points sont relativement proches de la droite, la largeur du crâne explique bien la longueur.
+On observe une relation linéaire, plus la largeur du crâne augmente, plus la longueur du crâne augmente. Les points sont relativement proches de la droite, la largeur du crâne explique bien la longueur.
 
 alpha de 2.575 et pente beta de 0.449
 
-beta significatif donc prouve une relation, le R\^2 est de environ 0.756 = bon modèle
+le R\^2 est de environ 0.756 = bon modèle
+
+Distribution des résidus linéaire, les résidus semblent suivre une distribution Normale, la variance des résidus indique une homoscédasticité, pas de valeurs extrèmes
 
 $$
 `r eq__(lezards_lm2, use_coefs = TRUE, coefs_digits = 3)`
