@@ -148,6 +148,8 @@ combine_charts(list(a, b))
 
 ```
 
+A FAIRE
+
 -Globalement, largeur et longueur du crâne des Vanarus salvator diffèrent entre les individus mâles et femelles
 
 -femelles ont des valeurs plus basses d'au moins 1 centimètre par rapport aux mâles dans les 2 variables
@@ -206,8 +208,10 @@ tabularise(summary_(lezards_lm2))
 chart$residuals(lezards_lm2)
 ```
 
+Interprétation...
+
 $$
-`r eq__(lezards_lm2, use_coefs = TRUE)`
+`r eq__(lezards_lm2, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Modèle linéaire 1
@@ -266,6 +270,12 @@ tabularise(summary_(lezards_ml2))
 chart$residuals(lezards_ml2)
 ```
 
+Interprétation...
+
+$$
+`r eq__(lezards_ml2, use_coefs = TRUE, coefs_digits = 3)`
+$$
+
 #### Modèle linéaire généralisé et/ou mixte 1
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
@@ -283,6 +293,10 @@ tabularise(summary_(lezards_mlg1))
 lezards_mlg2 <- glm(data = lezards, sexe ~ largcrane * longcrane, family = binomial)
 tabularise(summary_(lezards_mlg2))
 ```
+
+$$
+`r eq__(lezards_mlg2, use_coefs = TRUE, coefs_digits = 3)`
+$$
 
 ## Conclusion
 
