@@ -152,11 +152,19 @@ lezards_lm1_1 <- lm(data= lezards, circbasequeue ~ masse + sexe_rec)
 tabularise(summary_(lezards_lm1_1))
 ```
 
-Tous les paramètres sont significativement différents de 0 au seuil alpha de 5%. Le R\^2 est de 0,62 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle-le est significatif.
+Tous les paramètres sont significativement différents de 0 au seuil alpha de 5%. Le R\^2 est de 0,62 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
 
 ```{r residuals1}
 chart$residuals(lezards_lm1)
 ```
+
+Les résidus sont importants par rapport à la plage de valeurs prédites. La linéarité est relativement bien respectée malgré la présence d'une valeur extrême.
+
+Les résidus ont une distribution qui ne diffère pas trop de la Normale sauf aux extrémités.
+
+Il y a homoscedasticité des résidus. Et toujours la présence d'une valeur extrême.
+
+Un point a un effet de levier important ainsi qu'une distance de Cook importante ce qui influence le modèle.
 
 $$
 `r eq__(lezards_lm1, use_coefs = TRUE)`
