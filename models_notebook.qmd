@@ -145,7 +145,7 @@ lezards_lm1 <- lm(data= lezards, circbasequeue ~ masse * sexe_rec)
 tabularise(summary_(lezards_lm1))
 ```
 
-Ce modèle est trop complexe car on voit que $\beta_2$ .  et bêta 3 ne sont pas significativement différents de O au seuil alpha de 5%. Nous allons donc tenter de le simplifier.
+Ce modèle est trop complexe car on voit que $\beta_2$ et $\beta_3$ ne sont pas significativement différents de 0 au seuil $\alpha$ de 5%. Nous allons donc tenter de le simplifier.
 
 ```{r regressionlineaire1AlexiaetCamille1}
 lezards_lm1_1 <- lm(data= lezards, circbasequeue ~ masse + sexe_rec)
