@@ -135,7 +135,8 @@ chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
   geom_point()+ 
   labs(col="Sexe")+
   stat_smooth(method = "lm", formula = y ~ x)+ 
-  scale_color_brewer(palette = "Accent")
+  scale_color_brewer(palette = "Accent") +
+  labs(x="Masse [kg]")
 ```
 
 Le graphique montre que la circonférence de la base de la queue augmente avec la masse chez les deux sexes (mâle et femelle). Les points représentant les mâles sont globalement situés plus haut que ceux représentant les femelles pour une même masse. De même, la ligne de régression associée aux mâles reste au-dessus de celle des femelles sur l’ensemble des valeurs, indiquant que les mâles présentent des circonférences de base de queue plus élevées que les femelles dans cet échantillon. Il y a également un chevauchement entre les deux nuages de points, ainsi qu’une certaine dispersion des valeurs dans chaque groupe.
@@ -224,6 +225,8 @@ b <- chart(data=lezards, circbasequeue ~ longqueue %col=% sexe_rec) +
 
 combine_charts(list(a, b), common.legend = TRUE)
 ```
+
+Dans le premier graphique, on observe que lorsque la masse augmente, la circonférence de la base de la queue augmente également, aussi bien chez les mâles que chez les femelles. Le second graphique montre la même tendance avec la longueur de la queue. Plus elle est grande, plus la circonférence à sa base est importante. Dans l’ensemble, les mâles présentent des circonférences légèrement supérieures à celles des femelles pour des valeurs équivalentes de masse ou de longueur, mais la progression reste parallèle entre les deux sexes. Cela suggère que la circonférence de la base de la queue est principalement liée à la taille générale de l’animal, tout en montrant un léger dimorphisme sexuel.
 
 ```{r modelelineaire1AlexiaetCamille}
 lezards_ml1 <- lm(data= lezards, circbasequeue ~ (masse + longqueue) * sexe_rec)
