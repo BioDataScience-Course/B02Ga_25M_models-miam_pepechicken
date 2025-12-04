@@ -167,7 +167,7 @@ Il y a homoscedasticité des résidus. Et toujours la présence d'une valeur ext
 Un point a un effet de levier important ainsi qu'une distance de Cook importante ce qui influence le modèle.
 
 $$
-`r eq__(lezards_lm1, use_coefs = TRUE)`
+`r eq__(lezards_lm1, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Régression linéaire 2
