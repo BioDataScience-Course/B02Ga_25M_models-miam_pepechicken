@@ -165,7 +165,7 @@ Les résidus ont une distribution qui ne diffère pas trop de la Normale sauf au
 
 Il y a homoscédasticité des résidus. Et toujours la présence d'une valeur extrême.
 
-Un point a un effet de levier important ainsi qu'une distance de Cook importante ce qui influence le modèle.
+Un point a un effet de levier important ainsi qu'une distance de Cook importante mais ceci ne semble pas vraiement influencer le modèle.
 
 $$
 `r eq__(lezards_lm1, use_coefs = TRUE, coefs_digits = 3)`
@@ -188,7 +188,7 @@ lezards_lm2 <- lm(data = lezards, longcrane ~ largcrane)
 tabularise(summary_(lezards_lm2))
 ```
 
-La valeur de l’ordonnée à l’origine et de la pente sont significativement différentes de zéro au seuil alpha de 5%. Le R\^2 est d'environ 0.76, traduisant un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0.05, indique que le modèle est significatif.
+La valeur de l’ordonnée à l’origine et de la pente sont significativement différentes de zéro au seuil alpha de 5%. Le $R^2$ est d'environ 0,76, traduisant un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif.
 
 ```{r {r residuals2}
 chart$residuals(lezards_lm2)
@@ -246,7 +246,13 @@ Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ d
 chart$residuals(lezards_ml1)
 ```
 
-Interprétation...
+Les résidus sont importants par rapport à la plage de valeurs prédites. La linéarité est relativement bien respectée malgré la présence d'une valeur extrême.
+
+Les résidus ont une distribution qui ne diffère pas trop de la Normale sauf aux extrémités.
+
+Il y a homoscédasticité des résidus. Et toujours la présence d'une valeur extrême.
+
+Un point a un effet de levier important ainsi qu'une distance de Cook importante mais ceci ne semble pas fortement influencer le modèle.
 
 $$
 `r eq__(lezards_ml1, use_coefs = TRUE, coefs_digits = 3)`
