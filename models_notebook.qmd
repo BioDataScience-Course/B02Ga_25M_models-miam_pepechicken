@@ -1,5 +1,5 @@
 ---
-title: "Analyses morphométriques de *Varanus salvator*"
+title: "Analyses morphométriques de *Varanus salvator* afin de déterminer le sexe"
 author: "Alexia Baire, Camille Spagna, Jeanne Curto, Lou Hallot"
 format:
   html:
@@ -334,8 +334,10 @@ $$
 $$
 
 ```{r AIC}
-AIC(lezards_lm1, lezards_lm2, lezards_ml1, lezards_ml2, lezards_mlg1, lezards_mlg1_, lezards_mlg2)
+AIC(lezards_lm1_1, lezards_lm2, lezards_ml1_1, lezards_ml2, lezards_mlg1_2, lezards_mlg2)
 ```
+
+Selon le critère d'Akaike, les deux meilleurs modèles sont la régression linéaire 2 et le modèle linéaire 2.
 
 ## Conclusion
 
