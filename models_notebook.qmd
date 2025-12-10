@@ -246,7 +246,7 @@ Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ d
 chart$residuals(lezards_ml1)
 ```
 
-Les résidus sont importants par rapport à la plage de valeurs prédites. La linéarité est relativement bien respectée malgré la présence d'une valeur extrême.
+L'étendue des résidus est similaire par rapport aux valeurs prédites. La linéarité est relativement bien respectée malgré la présence d'une valeur extrême.
 
 Les résidus ont une distribution qui ne diffère pas trop de la Normale sauf aux extrémités.
 
