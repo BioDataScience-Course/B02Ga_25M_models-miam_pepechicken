@@ -300,11 +300,25 @@ $$
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
 ```{r modelelineairegeneraliseet/oumixte1AlexiaetCamille}
-lezards_mlg1_ <-glm(data = lezards, masse ~ (cbq_lt + lq_lt)*sexe_rec, family=gaussian)
-tabularise(summary_(lezards_mlg1_))
+lezards_mlg1_1 <-glm(data = lezards, masse ~ (cbq_lt + lq_lt)*sexe_rec, family=gaussian)
+tabularise(summary_(lezards_mlg1_1))
+```
+
+Aucun paramètre n'est significativement différent de 0 au seuil $\alpha$ de 5%. Nous allons donc simplifier ce modèle en supprimant l'interaction avec le sexe et en modifiant la variable réponse.
+
+```{r}
 lezards_mlg1 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt + masse, family=binomial)
 tabularise(summary_(lezards_mlg1))
 ```
+
+Les paramètres $\alpha$, $\beta_1$ et $\beta_2$ sont significativement différents de 0 au seuil $\alpha$ de 5%, tandis que le paramètre $\beta_3$ ne l'est pas. Nous allons de nouveau tenter de simplifier le modèle et de supprimer le facteur masse.
+
+```{r}
+lezards_mlg1_2 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt, family=binomial)
+tabularise(summary_(lezards_mlg1_2))
+```
+
+Tous les paramètres sont significativeement différents de 0 au seuil $\alpha$ de 5%.
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
