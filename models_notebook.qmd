@@ -101,7 +101,7 @@ chart(data=lezards, longtot ~ bodycond %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
-Sur le graphique on peut voir que lorsque que la longueur totale augmente, le ratio masse/longueur totale augmente aussi chez les deux sexes. Les valeurs pour mâles apparaissent légèrement plus élevées que celles des femelles pour des longueurs similaires, et leur ligne de tendance reste un peu au-dessus. Cela suggère que les mâles ont en moyenne un ratio légèrement supérieur.
+Le graphique montre une augmentation de la longueur totale lorsque le rapport masse/longueur totale s'élève, et ce pour les deux sexes. La tendance est assez comparable chez les mâles et les femelles, bien que la ligne des mâles soit légèrement au dessus Les deux groupes restent fortement hétérogènes, présentant une grande variabilité dans leurs valeurs.
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
@@ -277,7 +277,8 @@ lezards_ml2 <- lm(data = lezards, longcrane ~ largcrane * sexe)
 tabularise(summary_(lezards_ml2))
 ```
 
-Interprétation...
+Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. Le $R^2$ est de 0,76 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
+
 
 ```{r residuals3}
 chart$residuals(lezards_ml2)
@@ -318,7 +319,7 @@ lezards_mlg1_2 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt, family=binomial
 tabularise(summary_(lezards_mlg1_2))
 ```
 
-Tous les paramètres sont significativeement différents de 0 au seuil $\alpha$ de 5%. La déviance des résidus est de 1,25 ce qui est plutôt proche de 1. Ceci signifierait qu'il n'y a pas de surdispersion.
+Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. La déviance des résidus est de 1,25 ce qui est plutôt proche de 1. Ceci signifierait qu'il n'y a pas de surdispersion.
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
@@ -328,6 +329,8 @@ Tous les paramètres sont significativeement différents de 0 au seuil $\alpha$ 
 lezards_mlg2 <- glm(data = lezards, sexe_rec ~ largcrane * longcrane, family = binomial)
 tabularise(summary_(lezards_mlg2))
 ```
+
+Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%.
 
 $$
 `r eq__(lezards_mlg2, use_coefs = TRUE, coefs_digits = 3)`
