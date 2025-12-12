@@ -16,13 +16,15 @@ bibliography: references.bib
 
 <!--% Rédigez l'introduction de ce rapport en 5-6 phrases.-->
 
+La détermination du sexe chez les reptiles peut s’avérer complexe, notamment chez les espèces présentant peu de dimorphisme sexuel externe. *Varanus salvator*, le varan d’eau asiatique, est une espèce où les différences morphologiques entre mâles et femelles existent mais restent parfois difficiles à observer sans capture ou examen invasif.
+
 Le but de ce projet est de déterminer le sexe des *Varanus salvator* à partir de mesures morphométriques diverses. Cependant, les mesures effectuées sont prises sur des varans issus de l'élevage à des fins de commerce de peau. Ces usines ont tendance à accepter des individus de moins de 5 kilos. Cela ne représente donc peut-être pas les conditions naturelles de détermination de sexe.
 
 ## But
 
 <!--% Rédigez le but de ce rapport en 2 phrases.-->
 
-Le but de ce projet est de déterminer le sexe des *Varanus salvator* à partir de mesures morphométriques diverses.
+Le but de ce projet est donc de déterminer si des relations morphométriques spécifiques permettent de distinguer les mâles des femelles de *Varanus salvator*
 
 ## Matériel et méthodes
 
@@ -39,13 +41,5 @@ L'analyse est réalisée avec le logiciel R (`r R.version.string`) et en particu
 ## Discussion et Conclusion
 
 <!--% En tenant compte du but de votre carnet de notes et de vos résultats, discutez de résultats et proposez des conclusions à votre analyse en 5 à 10 phrases. -->
-
-Les mâles de *Varanus salvator* présentent une queue plus longue et plus large et un crâne légèrement plus grand que les femelles, bien que des chevauchements existent entre individus.
-
-La circonférence relative de la queue et la longueur de la queue par rapport à la longueur totale sont des indicateurs fiables pour prédire le sexe.
-
-L’inclusion des mesures du crâne, et notamment l’interaction entre largeur et longueur du crâne, peut améliorer légèrement la précision des modèles de prédiction.
-
-Enfin, nou savons décidé de conserver les 2 modèles linéaires génaralisés car ceux-ci sont les plus pertinents.
 
 ## Bibliographie
