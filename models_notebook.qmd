@@ -352,10 +352,10 @@ $$
 $$
 
 ```{r AIC}
-AIC(lezards_lm1_1, lezards_lm2, lezards_ml1_1, lezards_ml2, lezards_mlg1_2, lezards_mlg2, lezards_mlg2_1)
+AIC(lezards_lm1_1, lezards_lm2, lezards_ml1_1, lezards_ml2, lezards_mlg1_2, lezards_mlg2_1)
 ```
 
-Selon le critère d'Akaike, les deux meilleurs modèles sont la régression linéaire 2 et le modèle linéaire 2.
+Selon le critère d'Akaike, les trois meilleurs modèles sont la régression linéaire 2, le modèle linéaire généralisé 2 et le modèle linéaire généralisé 2.
 
 ## Conclusion
 
