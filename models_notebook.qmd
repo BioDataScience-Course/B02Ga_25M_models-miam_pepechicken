@@ -371,7 +371,7 @@ La circonférence relative de la queue et la longueur de la queue par rapport à
 
 L’inclusion des mesures du crâne, et notamment l’interaction entre largeur et longueur du crâne, peut améliorer légèrement la précision des modèles de prédiction.
 
-Enfin, nou savons décidé de conserver les 2 modèles linéaires génaralisés car ceux-ci sont les plus pertinents.
+Enfin, nous avons décidé de conserver les 2 modèles linéaires génaralisés car ceux-ci sont les plus pertinents.
 
 ## Références
 
