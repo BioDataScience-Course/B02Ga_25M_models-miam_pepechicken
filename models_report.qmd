@@ -30,7 +30,7 @@ Le but de ce projet est donc de déterminer si des relations morphométriques sp
 
 <!--% Cette section doit comprendre deux parties. La première partie doit expliciter les données employées et la seconde traiter des analyses réalisées et des logiciels employés.-->
 
-Au cours de ce projet, l'analyse des *Varanus Salvator* va être réalisée. Le jeu de donnée a été trouvé sur le site [Nature](https://www.nature.com/) dans la section Scientific data. Il comporte 146 individus et 20 variables. Plus amples informations sur ce jeu de données ont été trouvées au sein de [@alymann2024].
+Le jeu de donnée a été trouvé sur le site [Nature](https://www.nature.com/) dans la section Scientific data. Il comporte 146 individus et 20 variables. Plus amples informations sur ce jeu de données ont été trouvées au sein de [@alymann2024].
 
 L'analyse est réalisée avec le logiciel R (`r R.version.string`) et en particulier le package {modelit} version `r packageVersion("modelit")` avec la [SciViews Box 2025](https://www.sciviews.org/software/svbox/) dans [Saturn Cloud](https://saturncloud.io/) (Linux Ubuntu 22.04). Le seuil $\alpha$ de tous les tests est fixé à l'avance à 5%.
 
