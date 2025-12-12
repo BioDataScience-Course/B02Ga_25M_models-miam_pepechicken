@@ -36,21 +36,21 @@ tabularise$headtail(lezards)
 
 <!--% Rédigez l'introduction de ce rapport en 5-6 phrases.-->
 
-La détermination du sexe chez les reptiles peut s’avérer complexe, notamment chez les espèces présentant peu de dimorphisme sexuel externe. *Varanus salvator*, le varan d’eau asiatique, est une espèce où les différences morphologiques entre mâles et femelles existent mais restent parfois difficiles à observer sans capture ou examen invasif.
+La détermination du sexe chez les reptiles peut s’avérer complexe, notamment chez les espèces présentant peu de dimorphisme sexuel externe [@alymann2024a]. *Varanus salvator*, le varan d’eau asiatique, est une espèce où les différences morphologiques entre mâles et femelles existent mais restent parfois difficiles à observer sans capture ou examen invasif.
 
-L'analyse d'une population de *Varanus salvator* a été effectuée à partir de mesures morphométriques diverses. Cependant, les mesures effectuées sont prises sur des varans issus de l'élevage à des fins de commerce de peau. Ces usines ont tendance à accepter des individus de moins de 5 kilos. Cela ne représente donc peut-être pas les conditions naturelles de détermination de sexe.
+Dans ce projet, nous analysons une population de *Varanus salvator* à partir de mesures morphométriques diverses, telles que la longueur du corps, la circonférence de la queue ou les dimensions du crâne. Cependant, il convient de noter que ces mesures proviennent d’individus élevés pour le commerce de la peau, où les animaux sélectionnés pèsent généralement moins de 5 kg. Cette contrainte pourrait limiter la représentativité des résultats pour les conditions naturelles et la détermination du sexe dans la population sauvage.
 
 ## But
 
 <!--% Rédigez le but de ce rapport en 2 phrases.-->
 
-Le but de ce projet est donc de déterminer si des relations morphométriques spécifiques permettent de distinguer les mâles des femelles de *Varanus salvator*
+Le but de ce projet est donc de déterminer si des relations morphométriques spécifiques permettent de distinguer les mâles des femelles de *Varanus salvator.*
 
 ## Matériel et méthodes
 
 <!--% Cette section doit comprendre deux parties. La première partie doit expliciter les données employées et la seconde traiter des analyses réalisées et des logiciels employés.-->
 
-Au cours de ce projet, l'analyse des *Varanus Salvator* va être réalisée. Le jeu de donnée a été trouvé sur le site [Nature](https://www.nature.com/) dans la section Scientific data. Il comporte 146 individus et 20 variables. Plus amples informations sur ce jeu de données ont été trouvées au sein de [@alymann2024].
+Le jeu de donnée a été trouvé sur le site [Nature](https://www.nature.com/) dans la section Scientific data. Il comporte 146 individus et 20 variables. Plus amples informations sur ce jeu de données ont été trouvées au sein de [@alymann2024].
 
 L'analyse est réalisée avec le logiciel R (`r R.version.string`) et en particulier le package {modelit} version `r packageVersion("modelit")` avec la [SciViews Box 2025](https://www.sciviews.org/software/svbox/) dans [Saturn Cloud](https://saturncloud.io/) (Linux Ubuntu 22.04). Le seuil $\alpha$ de tous les tests est fixé à l'avance à 5%.
 
