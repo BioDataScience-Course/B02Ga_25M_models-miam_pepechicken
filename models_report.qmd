@@ -71,7 +71,7 @@ $$
 `r eq__(lezards_mlg1, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
-### Interaction de la largeur et de la longueur du crâne en focntion du sexe
+### Interaction de la largeur et de la longueur du crâne en fonction du sexe
 
 ```{r modèlelinéairegénéralisé2}
 lezards_mlg2 <- glm(data = lezards, sexe_rec ~ largcrane * longcrane, family = binomial)
