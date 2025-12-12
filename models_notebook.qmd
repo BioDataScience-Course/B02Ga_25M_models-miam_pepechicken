@@ -356,16 +356,20 @@ $$
 $$
 
 ```{r AIC}
-AIC(lezards_lm1_1, lezards_lm2, lezards_ml1_1, lezards_ml2, lezards_mlg1_2, lezards_mlg2, lezards_mlg2_1)
+AIC(lezards_lm1_1, lezards_lm2, lezards_ml1_1, lezards_ml2, lezards_mlg1_2, lezards_mlg2_1)
 ```
 
-Selon le critère d'Akaike, les deux meilleurs modèles sont la régression linéaire 2 et le modèle linéaire 2.
+Selon le critère d'Akaike, les trois meilleurs modèles sont la régression linéaire 2, le modèle linéaire généralisé 2 et le modèle linéaire généralisé 2.
 
 ## Conclusion
 
 <!--% Lorsque toutes les analyses sont réalisées, terminez ce bloc-notes avec 3 à 6 phrases de conclusion en rapport avec ce que vous avez observé dans vos analyses. Quels sont les modèles les plus pertinents que vous retenez ? -->
 
-...vos conclusions ici...
+Les mâles de *Varanus salvator* présentent une queue plus longue et plus large et un crâne légèrement plus grand que les femelles, bien que des chevauchements existent entre individus.
+
+La circonférence relative de la queue et la longueur de la queue par rapport à la longueur totale sont des indicateurs fiables pour prédire le sexe.
+
+L’inclusion des mesures du crâne, et notamment l’interaction entre largeur et longueur du crâne, peut améliorer légèrement la précision des modèles de prédiction.
 
 ## Références
 
