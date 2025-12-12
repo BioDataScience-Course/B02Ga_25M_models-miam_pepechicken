@@ -361,7 +361,11 @@ Selon le critère d'Akaike, les deux meilleurs modèles sont la régression lin�
 
 <!--% Lorsque toutes les analyses sont réalisées, terminez ce bloc-notes avec 3 à 6 phrases de conclusion en rapport avec ce que vous avez observé dans vos analyses. Quels sont les modèles les plus pertinents que vous retenez ? -->
 
-...vos conclusions ici...
+Les mâles de *Varanus salvator* présentent une queue plus longue et plus large et un crâne légèrement plus grand que les femelles, bien que des chevauchements existent entre individus.
+
+La circonférence relative de la queue et la longueur de la queue par rapport à la longueur totale sont des indicateurs fiables pour prédire le sexe.
+
+L’inclusion des mesures du crâne, et notamment l’interaction entre largeur et longueur du crâne, peut améliorer légèrement la précision des modèles de prédiction.
 
 ## Références
 
