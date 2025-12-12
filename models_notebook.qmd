@@ -29,7 +29,7 @@ Le but de ce projet est de voir si il est possible de déterminer le sexe de ces
 
 Au cours de ce projet, l'analyse des *Varanus Salvator* va être réalisée. Le jeu de donnée a été trouvé sur le site [Nature](https://www.nature.com/) dans la section Scientific data. Plus amples informations sur ce jeu de données ont été trouvées au sein de [@alymann2024].
 
-La régression linéaire simple par les moindres carrés est utilisée pour modéliser les données. L'analyse est réalisée avec le logiciel R (`r R.version.string`) et en particulier le package {modelit} version `r packageVersion("modelit")` avec la [SciViews Box 2025](https://www.sciviews.org/software/svbox/) dans [Saturn Cloud](https://saturncloud.io/) (Linux Ubuntu 22.04). Le seuil $\alpha$ de tous les tests est fixé à l'avance à 5%.
+L'analyse est réalisée avec le logiciel R (`r R.version.string`) et en particulier le package {modelit} version `r packageVersion("modelit")` avec la [SciViews Box 2025](https://www.sciviews.org/software/svbox/) dans [Saturn Cloud](https://saturncloud.io/) (Linux Ubuntu 22.04). Le seuil $\alpha$ de tous les tests est fixé à l'avance à 5%.
 
 ## Analyses
 
