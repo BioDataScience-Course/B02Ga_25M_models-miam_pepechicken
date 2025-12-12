@@ -21,27 +21,15 @@ bibliography: references.bib
 
 <!--% Rédigez une courte introduction de 3 ou 5 phrases qui présente vos données. Ajoutez une phrase de but (que vous remanierez éventuellement en fonction des modèles que vous ajouterez plus tard). Vous pouvez citer la bibliographie en utilisant le formatage Markdown ad hoc et en incluant votre référence au format bibtex dans le fichier references.bib. -->
 
-Nous souhaitons prédire l'âge des ormeaux (gastéropodes du genre *Haliotis*) sur base de mesures morphométriques. L'âge est déterminé avec certitude à l'année près en comptant sous microscope les anneaux de croissance au niveau d'une coupe de la coquille. C'est un travail long et fastidieux et nous nous demandons si l'âge ne peut pas être approximé en utilisant plutôt des données morphométriques (tailles, masses).
-
-Cette étude se focalise d'une part sur la relation entre la masse totale de l'animal et la longueur de la coquille comme analyse préliminaire pour caractériser l'évolution en masse par rapport à la taille durant la croissance, et ensuite sur la relation entre la masse totale et l'âge dans le but de déterminer ce dernier plus facilement.
-
-Au cours de ce projet, l'analyse des Varanus Salvator va être réalisée. Le jeu de donnée a été trouvé sur le site [Nature](https://www.nature.com/) dans la section Scientific data. Plus amples informations sur ce jeu de données ont été trouvée au sein de [@alymann2024]
-
 Le but de ce projet est de voir si il est possible de déterminer le sexe de ces individus en fonction de mesures morphométriques diverses.
 
 ## Matériel et méthodes
 
 <!--% Indiquez ici d'où viennent les données et aussi quel logiciel (et version) vous utilisez pour les analyses. Inspirez-vous des projets du premier module de SDD II. -->
 
-Les données ont été collectées par Warwick Nash *et al* et sont rendues publiques sous licence CC BY 4.0 avec le DOI [10.24432/C55C7W](https://doi.org/10.24432/C55C7W)**.** Les informations, données et métadonnées (dictionnaire des données) sont disponibles à partir du lien.
+Au cours de ce projet, l'analyse des *Varanus Salvator* va être réalisée. Le jeu de donnée a été trouvé sur le site [Nature](https://www.nature.com/) dans la section Scientific data. Plus amples informations sur ce jeu de données ont été trouvées au sein de [@alymann2024].
 
 La régression linéaire simple par les moindres carrés est utilisée pour modéliser les données. L'analyse est réalisée avec le logiciel R (`r R.version.string`) et en particulier le package {modelit} version `r packageVersion("modelit")` avec la [SciViews Box 2025](https://www.sciviews.org/software/svbox/) dans [Saturn Cloud](https://saturncloud.io/) (Linux Ubuntu 22.04). Le seuil $\alpha$ de tous les tests est fixé à l'avance à 5%.
-
-Lien du truc ou on a trouvé les données :
-
-<https://figshare.com/ndownloader/files/44709583>
-
-<https://figshare.com/articles/dataset/Varanus_salavator_morphology_sex_prediction_19_Features_csv/24558595?utm_source=chatgpt.com&file=44709583>
 
 ## Analyses
 
