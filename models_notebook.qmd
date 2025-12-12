@@ -266,7 +266,7 @@ chart(data=lezards, longcrane ~ largcrane %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
-Interprétation...
+Le graphique montre que la longueur du crâne augmente avec sa largeur chez les deux sexes. Les droites représentant les mâles et les femelles suivent globalement la même tendance et se superposent largement, indiquant que les variations de forme du crâne sont très similaires entre eux pour les valeurs observées. Cependant une importante dispersion des deux nuages de point est constaté, ainsi la différence de pente des deux droites est faible.
 
 ```{r}
 lezards_ml2 <- lm(data = lezards, largcrane ~ longcrane * sexe)
