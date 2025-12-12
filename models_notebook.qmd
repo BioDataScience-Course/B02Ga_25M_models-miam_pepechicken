@@ -164,7 +164,7 @@ Il y a homoscédasticité des résidus. Et toujours la présence d'une valeur ex
 Un point a un effet de levier important ainsi qu'une distance de Cook importante mais ceci ne semble pas vraiement influencer le modèle.
 
 $$
-`r eq__(lezards_lm1, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_lm1_1, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Régression linéaire 2
@@ -239,7 +239,7 @@ tabularise(summary_(lezards_ml1_1))
 Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%, sauf le paramètre $\beta_2$ dont la valeur de p est égale à 0,05. Le $R^2$ est de 0,63 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
 
 ```{r residuals2}
-chart$residuals(lezards_ml1)
+chart$residuals(lezards_ml1_1)
 ```
 
 L'étendue des résidus est similaire par rapport aux valeurs prédites. La linéarité est relativement bien respectée malgré la présence d'une valeur extrême.
@@ -251,7 +251,7 @@ Il y a homoscédasticité des résidus. Et toujours la présence d'une valeur ex
 Un point a un effet de levier important ainsi qu'une distance de Cook importante mais ceci ne semble pas fortement influencer le modèle.
 
 $$
-`r eq__(lezards_ml1, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_ml1_1, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Modèle linéaire 2
@@ -273,7 +273,7 @@ lezards_ml2 <- lm(data = lezards, largcrane ~ longcrane * sexe)
 tabularise(summary_(lezards_ml2))
 ```
 
-Ce modèle semble correct car tous les paramètres sont significativement différents de à au seuil $\alpha$ de 5%. De plus, le $R^2$ est d'environ 0,78 traduisant un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif. Cependant, il serait intéressant de voir s'il la largeur du crâne a une interaction plus forte avec le sexe que la longueur.
+Ce modèle semble correct car tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. De plus, le $R^2$ est d'environ 0,78 traduisant un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif. Cependant, il serait intéressant de voir s'il la largeur du crâne a une interaction plus forte avec le sexe que la longueur.
 
 ```{r modelelineaire2JeanneetLou}
 lezards_ml2_1 <- lm(data = lezards, longcrane ~ largcrane * sexe)
@@ -289,7 +289,7 @@ AIC(lezards_ml2,lezards_ml2_1)
 Grâce à cette comparaison des modèles, nous voyons plus clairement que le deuxième modèle, c'est-à-dire l'interaction entre la largeur du crâne et le sexe, est plus intéressant.
 
 ```{r residuals3}
-chart$residuals(lezards_ml2)
+chart$residuals(lezards_ml2_1)
 ```
 
 Les résidus se répartissent de manière équilibrée et linéaire.
@@ -301,7 +301,7 @@ Le graphique de la variance des résidus vérifie l'homoscédasticité.
 Aucune valeur n’influence trop fortement la régression linéaire.
 
 $$
-`r eq__(lezards_ml2, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_ml2_1, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Modèle linéaire généralisé et/ou mixte 1
@@ -309,14 +309,14 @@ $$
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
 ```{r modelelineairegeneraliseet/oumixte1AlexiaetCamille}
-lezards_mlg1_1 <-glm(data = lezards, masse ~ (cbq_lt + lq_lt)*sexe_rec, family=gaussian)
-tabularise(summary_(lezards_mlg1_1))
+lezards_mlg1 <- glm(data = lezards, masse ~ (cbq_lt + lq_lt)*sexe_rec, family=gaussian)
+tabularise(summary_(lezards_mlg1))
 ```
 
 Aucun paramètre n'est significativement différent de 0 au seuil $\alpha$ de 5%. Nous allons donc simplifier ce modèle en supprimant l'interaction avec le sexe et en modifiant la variable réponse.
 
 ```{r}
-lezards_mlg1 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt + masse, family=binomial)
+lezards_mlg1_1 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt + masse, family=binomial)
 tabularise(summary_(lezards_mlg1))
 ```
 
@@ -328,6 +328,10 @@ tabularise(summary_(lezards_mlg1_2))
 ```
 
 Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. La déviance des résidus est de 1,25 ce qui est plutôt proche de 1. Ceci signifierait qu'il n'y a pas de surdispersion.
+
+$$
+`r eq__(lezards_mlg1_2, use_coefs = TRUE, coefs_digits = 3)`
+$$
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
