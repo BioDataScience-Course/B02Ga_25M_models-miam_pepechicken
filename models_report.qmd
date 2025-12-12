@@ -16,7 +16,7 @@ bibliography: references.bib
 
 <!--% Rédigez l'introduction de ce rapport en 5-6 phrases.-->
 
-La détermination du sexe chez les reptiles peut s’avérer complexe, notamment chez les espèces présentant peu de dimorphisme sexuel externe. *Varanus salvator*, le varan d’eau asiatique, est une espèce où les différences morphologiques entre mâles et femelles existent mais restent parfois difficiles à observer sans capture ou examen invasif.
+La détermination du sexe chez les reptiles peut s’avérer complexe, notamment chez les espèces présentant peu de dimorphisme sexuel externe [@alymann2024a]. *Varanus salvator*, le varan d’eau asiatique, est une espèce où les différences morphologiques entre mâles et femelles existent mais restent parfois difficiles à observer sans capture ou examen invasif.
 
 L'analyse d'une population de *Varanus salvator* a été effectuée à partir de mesures morphométriques diverses. Cependant, les mesures effectuées sont prises sur des varans issus de l'élevage à des fins de commerce de peau. Ces usines ont tendance à accepter des individus de moins de 5 kilos. Cela ne représente donc peut-être pas les conditions naturelles de détermination de sexe.
 
