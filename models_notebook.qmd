@@ -21,6 +21,7 @@ bibliography: references.bib
 
 <!--% Rédigez une courte introduction de 3 ou 5 phrases qui présente vos données. Ajoutez une phrase de but (que vous remanierez éventuellement en fonction des modèles que vous ajouterez plus tard). Vous pouvez citer la bibliographie en utilisant le formatage Markdown ad hoc et en incluant votre référence au format bibtex dans le fichier references.bib. -->
 
+
 Nous souhaitons prédire l'âge des ormeaux (gastéropodes du genre *Haliotis*) sur base de mesures morphométriques. L'âge est déterminé avec certitude à l'année près en comptant sous microscope les anneaux de croissance au niveau d'une coupe de la coquille. C'est un travail long et fastidieux et nous nous demandons si l'âge ne peut pas être approximé en utilisant plutôt des données morphométriques (tailles, masses).
 
 Cette étude se focalise d'une part sur la relation entre la masse totale de l'animal et la longueur de la coquille comme analyse préliminaire pour caractériser l'évolution en masse par rapport à la taille durant la croissance, et ensuite sur la relation entre la masse totale et l'âge dans le but de déterminer ce dernier plus facilement.
