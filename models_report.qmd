@@ -1,5 +1,5 @@
 ---
-title: "Critères de sexage de *Varanus salvator*"
+title: "Détermination des critères de sexage de *Varanus salvator*"
 author: "Baire Alexia, Spagna Camille, Curto Jeanne, Hallot Lou"
 format:
   pdf:
