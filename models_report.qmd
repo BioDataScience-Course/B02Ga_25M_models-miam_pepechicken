@@ -97,6 +97,8 @@ chart(data=lezards, longcrane ~ largcrane %col=% sexe_rec) +
   scale_color_brewer(palette = "Accent")
 ```
 
+Dans le premier graphique, lorsque la masse augmente, la circonférence de la base de la queue augmente également, aussi bien chez les mâles que chez les femelles. Le second graphique montre la même tendance avec la longueur de la queue. Plus elle est grande, plus la circonférence de la base de la queue est importante. Dans l’ensemble, les mâles présentent des circonférences légèrement supérieures à celles des femelles pour des valeurs équivalentes de masse ou de longueur de la queue, mais la progression reste parallèle entre les deux sexes.
+
 ```{r modèlelinéairegénéralisé2}
 lezards_mlg2 <- glm(data = lezards, sexe_rec ~ largcrane * longcrane, family = binomial)
 tabularise(summary_(lezards_mlg2_1))
