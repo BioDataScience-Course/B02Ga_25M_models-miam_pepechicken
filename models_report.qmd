@@ -20,7 +20,7 @@ La détermination du sexe chez les reptiles peut s’avérer complexe, notamment
 
 Dans ce projet, nous analysons une population de *Varanus salvator* à partir de mesures morphométriques diverses, telles que la longueur du corps, la circonférence de la queue ou les dimensions du crâne. Cependant, il convient de noter que ces mesures proviennent d’individus élevés pour le commerce de la peau, où les animaux sélectionnés pèsent généralement moins de 5 kg. Cette contrainte pourrait limiter la représentativité des résultats pour les conditions naturelles et la détermination du sexe dans la population sauvage.
 
-Il est important de noter que les variables concerant la longueur de la queue, la circonférence à la base de la queue ainsi que les diverses dimensions du crâne sont les variables les plus intéressantes à utiliser dans ce projet car elles permettent de déterminer de manière non-invasive le sexe des individus de l'espèce *Varanus salvator*.
+Il est important de noter que les variables concernant la longueur de la queue, la circonférence à la base de la queue ainsi que les diverses dimensions du crâne sont les variables les plus intéressantes à utiliser dans ce projet car elles permettent de déterminer de manière non-invasive le sexe des individus de l'espèce *Varanus salvator*.
 
 ## But
 
