@@ -89,6 +89,14 @@ $$
 
 ### Interaction de la largeur et de la longueur du crâne en fonction du sexe
 
+```{r graphique2}
+chart(data=lezards, longcrane ~ largcrane %col=% sexe_rec) +
+  geom_point()+
+  labs(col="Sexe")+
+  stat_smooth(method = "lm", formula = y ~ x)+ 
+  scale_color_brewer(palette = "Accent")
+```
+
 ```{r modèlelinéairegénéralisé2}
 lezards_mlg2 <- glm(data = lezards, sexe_rec ~ largcrane * longcrane, family = binomial)
 tabularise(summary_(lezards_mlg2_1))
