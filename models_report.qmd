@@ -12,26 +12,6 @@ bibliography: references.bib
 
 <!--# Un rapport est différent d'un carnet de notes. Il ne s'agit donc pas de faire du copier-coller d'un document vers l'autre. Un rapport de synthèse doit être compréhensible sans devoir lire le carnet de notes. Le rapport de synthèse doit être  rédigé avec un style et une présentation adéquats. -->
 
-```{r setup, include=FALSE}
-# Ceci est nécessaire pour les tests SDD, ne pas utiliser dans un "vrai" projet
-if (!"tools:tests" %in% search())
-  source(here::here("tests/tools_tests.R"), attach(NULL, name = "tools:tests"))
-
-# Configure Knitr to use AGG as graphic device
-knitr::opts_chunk$set(dev = "ragg_png")
-
-# Configuration de l'environnement
-SciViews::R("model")
-```
-
-```{r import}
-# Lecture des données
-lezards <- read("data/lezards.rds")
-
-# Tableau des premières et dernières lignes
-tabularise$headtail(lezards)
-```
-
 ## Introduction
 
 <!--% Rédigez l'introduction de ce rapport en 5-6 phrases.-->
@@ -57,6 +37,26 @@ L'analyse est réalisée avec le logiciel R (`r R.version.string`) et en particu
 ## Résultats
 
 <!--% Présentez les deux modèles les plus pertinents que vous avez sélectionnés. Structurez la section en deux parties avec deux titres de niveau trois.-->
+
+```{r setup, include=FALSE}
+# Ceci est nécessaire pour les tests SDD, ne pas utiliser dans un "vrai" projet
+if (!"tools:tests" %in% search())
+  source(here::here("tests/tools_tests.R"), attach(NULL, name = "tools:tests"))
+
+# Configure Knitr to use AGG as graphic device
+knitr::opts_chunk$set(dev = "ragg_png")
+
+# Configuration de l'environnement
+SciViews::R("model")
+```
+
+```{r import}
+# Lecture des données
+lezards <- read("data/lezards.rds")
+
+# Tableau des premières et dernières lignes
+tabularise$headtail(lezards)
+```
 
 ### Longueur de la queue et circonférence de la base de la queue en fonction du sexe
 
