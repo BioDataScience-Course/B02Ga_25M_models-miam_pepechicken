@@ -109,6 +109,10 @@ tabularise(summary_(lezards_mlg2_1))
 ```
 
 Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. La déviance des résidus est de 1,3, cette valeur est assez proche de 1, il n'y a pas de surdispersion et il ne faut donc pas réajuster le paramètre de dispersion. Le modèle révèle un dimorphisme sexuel crânien chez *Varanus salvator*, perceptible à travers la largeur, la longueur et la combinaison des dimensions du crâne. La largeur du crâne ($\beta_1$) montre qu’une augmentation réduit la probabilité d’être femelle, suggérant que les mâles possèdent des crânes plus larges. De même, la longueur du crâne ($\beta_2$) indique que les mâles présentent des crânes plus allongés. Enfin, l’interaction largeur x longueur ($\beta_3$) souligne que la forme générale du crâne, et non une mesure isolée, influe sur le sexe.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d8fb6ee7b1dc7a2315f4e56975f258964f4a147
 
 $$
 `r eq__(lezards_mlg2, use_coefs = TRUE, coefs_digits = 3)`
