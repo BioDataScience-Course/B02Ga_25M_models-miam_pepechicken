@@ -60,6 +60,22 @@ tabularise$headtail(lezards)
 
 ### Longueur de la queue et circonférence de la base de la queue en fonction du sexe
 
+```{r graphique1}
+a <- chart(data=lezards, circbasequeue ~ masse %col=% sexe_rec) +
+  geom_point()+
+  stat_smooth(method="lm", formula = y ~ x)+
+  scale_color_brewer(palette = "Accent")+
+  labs(x="Masse [Kg]", col = "Sexe")
+
+b <- chart(data=lezards, circbasequeue ~ longqueue %col=% sexe_rec) +
+  geom_point()+
+  stat_smooth(method="lm", formula = y ~ x)+
+  scale_color_brewer(palette = "Accent")+
+  labs(col = "Sexe")
+
+combine_charts(list(a, b), common.legend = TRUE)
+```
+
 ```{r modèlelinéairegénéralisé1}
 lezards_mlg1 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt, family=binomial)
 tabularise(summary_(lezards_mlg1_2))
