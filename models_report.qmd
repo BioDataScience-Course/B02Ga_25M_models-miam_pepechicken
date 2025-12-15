@@ -118,4 +118,6 @@ $$
 
 <!--% En tenant compte du but de votre carnet de notes et de vos résultats, discutez de résultats et proposez des conclusions à votre analyse en 5 à 10 phrases. -->
 
+Les mâles de *Varanus salvator* présentent globalement une queue plus longue et plus large, ainsi qu’un crâne légèrement plus développé que celui des femelles. Malgré ces différences morphologiques, un chevauchement des mesures est observé entre individus des deux sexes. La circonférence de la base de la queue et la longueur relative de la queue par rapport à la longueur totale apparaissent comme des indicateurs particulièrement pertinents pour la prédiction du sexe. Ces variables permettent une discrimination plus fiable que seulement les mesures crâniennes. L’intégration des dimensions du crâne, en particulier l’interaction entre la largeur et la longueur du crâne, contribue à améliorer légèrement la performance des modèles prédictifs. Cependant, cet apport reste secondaire par rapport aux mesures caudales. En conséquence, les deux modèles linéaires généralisés ont été conservés, car ils offrent un bon compromis dans le cadre de cette étude.
+
 ## Bibliographie
