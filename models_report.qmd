@@ -85,7 +85,7 @@ lezards_mlg1 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt, family=binomial)
 tabularise(summary_(lezards_mlg1_2))
 ```
 
-Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. La déviance des résidus est de 1,25 ce qui est plutôt proche de 1. Ceci signifierait qu'il n'y a pas de surdispersion.
+Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. La déviance des résidus est de 1,25 ce qui est plutôt proche de 1. Ceci signifierait qu'il n'y a pas de surdispersion. Vu que les deux coefficients sont significatifs et négatifs ($\beta_1$ =- 79,6 et $\beta_2$ =- 20,4), on peut en conclure que plus la base de la queue est large par rapport à la longueur totale, moins il est probable que ce soit une femelle. De plus, plus la queue est longue par rapport à la longueur totale, moins il est probable que le lézard soit une femelle. Autrement dit, les mâles ont tendance à avoir une base de queue plus large et une queue plus longue que les femelles, proportionnellement à leur corps.
 
 $$
 `r eq__(lezards_mlg1, use_coefs = TRUE, coefs_digits = 3)`
