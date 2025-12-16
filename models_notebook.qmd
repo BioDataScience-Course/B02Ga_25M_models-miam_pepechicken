@@ -59,7 +59,7 @@ tabularise$headtail(lezards)
 
 <!--% Chaque étudiant réalise et interprète un graphique pertinent en lien avec le but fixé et les modèles qui seront réalisés. Graphique et interprétation de l'étudiant #1 ci-dessous. -->
 
-```{r chart1Alexia}
+```{r chart1}
 chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
   geom_point()+ 
   labs(col="Sexe")+
@@ -71,7 +71,7 @@ Le graphique montre que la circonférence de la base de la queue augmente avec l
 
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
-```{r chart2Camille}
+```{r chart2}
 A <- chart(data = lezards, longtot ~ masse_rec_rec %fill=% sexe_rec) +
   geom_boxplot() +
   labs(fill = "Sexe", x = "Masse") +
@@ -89,7 +89,7 @@ Pour une même masse, les mâles de *Varanus salvator* tendent à avoir une long
 
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
-```{r chart3Jeanne}
+```{r chart3}
 chart(data=lezards, longtot ~ bodycond %col=% sexe_rec) +
   geom_point() +
   stat_smooth(method = "lm", formula = y ~ x) +
@@ -101,7 +101,7 @@ Le graphique montre une augmentation de la longueur totale lorsque le rapport ma
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
-```{r chart4Lou}
+```{r chart4}
 a <- chart(data = lezards, ~ largcrane %fill=% sexe_rec | sexe_rec) +
   geom_histogram(show.legend = FALSE, bins = 15) +
   ylab("Effectifs") +
@@ -137,22 +137,22 @@ chart(data = lezards, circbasequeue ~ masse %col=% sexe_rec) +
 
 Le graphique montre que la circonférence de la base de la queue augmente avec la masse chez les deux sexes (mâle et femelle). Les points représentant les mâles sont globalement situés plus haut que ceux représentant les femelles pour une même masse. De même, la ligne de régression associée aux mâles reste au-dessus de celle des femelles sur l’ensemble des valeurs, indiquant que les mâles présentent des circonférences de base de queue plus élevées que les femelles dans cet échantillon. Il y a également un chevauchement entre les deux nuages de points, ainsi qu’une certaine dispersion des valeurs dans chaque groupe.
 
-```{r regressionlineaire1AlexiaetCamille}
-lezards_lm1 <- lm(data= lezards, circbasequeue ~ masse * sexe_rec)
-tabularise(summary_(lezards_lm1))
+```{r regressionlineaire1_1}
+lezards_rl1_1 <- lm(data= lezards, circbasequeue ~ masse * sexe_rec)
+tabularise(summary_(lezards_rl1_1))
 ```
 
 Ce modèle est trop complexe car on voit que $\beta_2$ et $\beta_3$ ne sont pas significativement différents de 0 au seuil $\alpha$ de 5%. Nous allons donc tenter de le simplifier.
 
-```{r regressionlineaire1AlexiaetCamille1}
-lezards_lm1_1 <- lm(data= lezards, circbasequeue ~ masse + sexe_rec)
-tabularise(summary_(lezards_lm1_1))
+```{r regressionlineaire1_2}
+lezards_rl1_2 <- lm(data= lezards, circbasequeue ~ masse + sexe_rec)
+tabularise(summary_(lezards_rl1_2))
 ```
 
 Tous les paramètres sont significativement différents de 0 au seuil alpha de 5%. Le $R^2$ est de 0,62 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
 
-```{r residuals1}
-chart$residuals(lezards_lm1_1)
+```{r regressionlineaire1residus}
+chart$residuals(lezards_rl1_2)
 ```
 
 Les résidus sont importants par rapport à la plage de valeurs prédites. La linéarité est relativement bien respectée malgré la présence d'une valeur extrême.
@@ -164,14 +164,14 @@ Il y a homoscédasticité des résidus. Et toujours la présence d'une valeur ex
 Un point a un effet de levier important ainsi qu'une distance de Cook importante mais ceci ne semble pas vraiement influencer le modèle.
 
 $$
-`r eq__(lezards_lm1_1, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_rl1_2, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Régression linéaire 2
 
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
-```{r graphiqueregressionlineaire2}
+```{r regressionlineaire2graphique}
 chart(data=lezards, longcrane ~ largcrane) +
   geom_point()+
   stat_smooth(method="lm", formula = y ~ x)
@@ -179,15 +179,15 @@ chart(data=lezards, longcrane ~ largcrane) +
 
 Une relation linéaire est observée, les points sont relativement proches de la droite. Plus la largeur du crâne augmente, plus la longueur du crâne augmente.
 
-```{r regressionlineaire2JeanneetLou}
-lezards_lm2 <- lm(data = lezards, longcrane ~ largcrane)
-tabularise(summary_(lezards_lm2))
+```{r regressionlineaire2}
+lezards_rl2 <- lm(data = lezards, longcrane ~ largcrane)
+tabularise(summary_(lezards_rl2))
 ```
 
 La valeur de l’ordonnée à l’origine et de la pente sont significativement différentes de zéro au seuil alpha de 5%. Le $R^2$ est d'environ 0,76, traduisant un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif.
 
-```{r {r residuals2}
-chart$residuals(lezards_lm2)
+```{r regressionlineaire2residus}
+chart$residuals(lezards_rl2)
 ```
 
 Les résidus se répartissent de manière équilibrée et linéaire.
@@ -199,14 +199,14 @@ Le graphique de la variance des résidus vérifie l'homoscédasticité.
 Aucune valeur n’influence trop fortement la régression linéaire.
 
 $$
-`r eq__(lezards_lm2, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_rl2, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Modèle linéaire 1
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{r modelelineairegraphique1}
+```{r modelelineaire1graphique}
 a <- chart(data=lezards, circbasequeue ~ masse %col=% sexe_rec) +
   geom_point()+
   stat_smooth(method="lm", formula = y ~ x)+
@@ -224,22 +224,22 @@ combine_charts(list(a, b), common.legend = TRUE)
 
 Dans le premier graphique, on observe que lorsque la masse augmente, la circonférence de la base de la queue augmente également, aussi bien chez les mâles que chez les femelles. Le second graphique montre la même tendance avec la longueur de la queue. Plus elle est grande, plus la circonférence de la base de la queue est importante. Dans l’ensemble, les mâles présentent des circonférences légèrement supérieures à celles des femelles pour des valeurs équivalentes de masse ou de longueur de la queue, mais la progression reste parallèle entre les deux sexes.
 
-```{r modelelineaire1AlexiaetCamille}
-lezards_ml1 <- lm(data= lezards, circbasequeue ~ (masse + longqueue) * sexe_rec)
-tabularise(summary_(lezards_ml1))
+```{r modelelineaire1_1}
+lezards_ml1_1 <- lm(data= lezards, circbasequeue ~ (masse + longqueue) * sexe_rec)
+tabularise(summary_(lezards_ml1_1))
 ```
 
 Les paramètres $\alpha$, $\beta_1$ et $\beta_2$ sont significativement différents de 0 au seuil $\alpha$ de 5%, tandis que les paramètres $\beta_3$, $\beta_4$ et $\beta_5$ ne le sont pas. Nous allons donc tenter de simplifier le modèle et de supprimer les interactions.
 
-```{r}
-lezards_ml1_1 <- lm(data= lezards, circbasequeue ~ masse + longqueue + sexe_rec)
-tabularise(summary_(lezards_ml1_1))
+```{r modelelineaire1_2}
+lezards_ml1_2 <- lm(data= lezards, circbasequeue ~ masse + longqueue + sexe_rec)
+tabularise(summary_(lezards_ml1_2))
 ```
 
 Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%, sauf le paramètre $\beta_2$ dont la valeur de p est égale à 0,05. Le $R^2$ est de 0,63 ce qui montre que le modèle est relativement bon. De plus, la valeur de p est très inférieure à 0,05 ce qui signifie que le modèle est significatif.
 
-```{r residuals2}
-chart$residuals(lezards_ml1_1)
+```{r modelelineaire1residus}
+chart$residuals(lezards_ml1_2)
 ```
 
 L'étendue des résidus est similaire par rapport aux valeurs prédites. La linéarité est relativement bien respectée malgré la présence d'une valeur extrême.
@@ -251,14 +251,14 @@ Il y a homoscédasticité des résidus. Et toujours la présence d'une valeur ex
 Un point a un effet de levier important ainsi qu'une distance de Cook importante mais ceci ne semble pas fortement influencer le modèle.
 
 $$
-`r eq__(lezards_ml1_1, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_ml1_2, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Modèle linéaire 2
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{r modelelineairegraphique2}
+```{r modelelineaire2graphique}
 chart(data=lezards, longcrane ~ largcrane %col=% sexe_rec) +
   geom_point()+
   labs(col="Sexe")+
@@ -268,28 +268,22 @@ chart(data=lezards, longcrane ~ largcrane %col=% sexe_rec) +
 
 Le graphique montre que la longueur du crâne augmente avec sa largeur chez les deux sexes. Les droites représentant les mâles et les femelles suivent globalement la même tendance et se superposent largement, indiquant que les variations de forme du crâne sont très similaires entre eux pour les valeurs observées. Cependant une importante dispersion des deux nuages de point est constaté, ainsi la différence de pente des deux droites est faible.
 
-```{r}
-lezards_ml2 <- lm(data = lezards, largcrane ~ longcrane * sexe)
-tabularise(summary_(lezards_ml2))
-```
-
-Ce modèle semble correct car tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. De plus, le $R^2$ est d'environ 0,78 traduisant un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif. Cependant, il serait intéressant de voir s'il la largeur du crâne a une interaction plus forte avec le sexe que la longueur.
-
-```{r modelelineaire2JeanneetLou}
-lezards_ml2_1 <- lm(data = lezards, longcrane ~ largcrane * sexe)
+```{r modelelineaire2_1}
+lezards_ml2_1 <- lm(data = lezards, largcrane ~ longcrane * sexe)
 tabularise(summary_(lezards_ml2_1))
 ```
 
-De nouveau, pour ce modèle, les paramètres sont significativement différents de zéro au seuil $\alpha$ de 5%. Le $R^2$ est d'environ 0,77, très faiblement inférieur au précédent (0,78) mais traduis tout de même d'un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif.
+Le paramètre $\beta_1$ est significativement différent de 0 au seuil $\alpha$ de 5%. Ce modèle est donc trop complexe. Cependant, essayons de voir si le sexe n'aurait pas une interaction plus interréssante avec largeur du crâne à la place de la longueur.
 
-```{r}
-AIC(lezards_ml2,lezards_ml2_1)
+```{r modelelineaire2_2}
+lezards_ml2_2 <- lm(data = lezards, longcrane ~ largcrane * sexe)
+tabularise(summary_(lezards_ml2_2))
 ```
 
-Grâce à cette comparaison des modèles, nous voyons plus clairement que le deuxième modèle, c'est-à-dire l'interaction entre la largeur du crâne et le sexe, est plus intéressant.
+Pour ce modèle, tous les paramètres sont significativement différents de zéro au seuil $\alpha$ de 5%. Le $R^2$ est d'environ 0,77, très faiblement supérieur au précédent (0,76) mais traduis tout de même d'un meileur modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif.
 
-```{r residuals3}
-chart$residuals(lezards_ml2_1)
+```{r modelelineaire2residus}
+chart$residuals(lezards_ml2_2)
 ```
 
 Les résidus se répartissent de manière équilibrée et linéaire.
@@ -301,62 +295,62 @@ Le graphique de la variance des résidus vérifie l'homoscédasticité.
 Aucune valeur n’influence trop fortement la régression linéaire.
 
 $$
-`r eq__(lezards_ml2_1, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_ml2_2, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Modèle linéaire généralisé et/ou mixte 1
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{r modelelineairegeneraliseet/oumixte1AlexiaetCamille}
-lezards_mlg1 <- glm(data = lezards, masse ~ (cbq_lt + lq_lt)*sexe_rec, family=gaussian)
-tabularise(summary_(lezards_mlg1))
+```{r modelelineairegeneralise1_1}
+lezards_mlg1_1 <- glm(data = lezards, masse ~ (cbq_lt + lq_lt)*sexe_rec, family=gaussian)
+tabularise(summary_(lezards_mlg1_1))
 ```
 
 Aucun paramètre n'est significativement différent de 0 au seuil $\alpha$ de 5%. Nous allons donc simplifier ce modèle en supprimant l'interaction avec le sexe et en modifiant la variable réponse.
 
-```{r}
-lezards_mlg1_1 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt + masse, family=binomial)
-tabularise(summary_(lezards_mlg1))
+```{r modelelineairegeneralise1_2}
+lezards_mlg1_2 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt + masse, family=binomial)
+tabularise(summary_(lezards_mlg1_2))
 ```
 
 Les paramètres $\alpha$, $\beta_1$ et $\beta_2$ sont significativement différents de 0 au seuil $\alpha$ de 5%, tandis que le paramètre $\beta_3$ ne l'est pas. Nous allons de nouveau tenter de simplifier le modèle et de supprimer le facteur masse.
 
-```{r}
-lezards_mlg1_2 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt, family=binomial)
-tabularise(summary_(lezards_mlg1_2))
+```{r modelelineairegeneralise1_3}
+lezards_mlg1_3 <- glm(data = lezards, sexe_rec ~ cbq_lt + lq_lt, family=binomial)
+tabularise(summary_(lezards_mlg1_3))
 ```
 
 Tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. La déviance des résidus est de 1,25 ce qui est plutôt proche de 1. Ceci signifierait qu'il n'y a pas de surdispersion.
 
 $$
-`r eq__(lezards_mlg1_2, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_mlg1_3, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{r}
-lezards_mlg2 <- glm(data = lezards, sexe_rec ~ largcrane + longcrane, family = binomial)
-tabularise(summary_(lezards_mlg2))
+```{r modelelineairegeneralise2_1}
+lezards_mlg2_1 <- glm(data = lezards, sexe_rec ~ largcrane + longcrane, family = binomial)
+tabularise(summary_(lezards_mlg2_1))
 ```
 
 Aucun paramètre n'est différent de 0 au seuil $\alpha$ de 5%. Nous allons donc essayer un modèle plus complexe.
 
-```{r modelelineairegeneraliseetoumixte1JeanneetLou}
-lezards_mlg2_1 <- glm(data = lezards, sexe_rec ~ largcrane * longcrane, family = binomial)
-tabularise(summary_(lezards_mlg2_1))
+```{r modelelineairegeneralise2_2}
+lezards_mlg2_2 <- glm(data = lezards, sexe_rec ~ largcrane * longcrane, family = binomial)
+tabularise(summary_(lezards_mlg2_2))
 ```
 
 Désormais, tous les paramètres sont significativement différents de 0 au seuil $\alpha$ de 5%. La déviance des résidus est de 1,3, cette valeur est assez proche de 1, il n'y a pas de surdispersion et il ne faut donc pas réajuster le paramètre de dispersion. On voit également que le critère d'Akaike ici est de 199,6 précédemment de 203,5, ce qui favorise ce modèle.
 
 $$
-`r eq__(lezards_mlg2, use_coefs = TRUE, coefs_digits = 3)`
+`r eq__(lezards_mlg2_2, use_coefs = TRUE, coefs_digits = 3)`
 $$
 
 ```{r AIC}
-AIC(lezards_lm1_1, lezards_lm2, lezards_ml1_1, lezards_ml2, lezards_mlg1_2, lezards_mlg2_1)
+AIC(lezards_rl1_2, lezards_rl2, lezards_ml1_2, lezards_ml2_2, lezards_mlg1_3, lezards_mlg2_2)
 ```
 
 Selon le critère d'Akaike, les trois meilleurs modèles sont la régression linéaire 2, le modèle linéaire généralisé 2 et le modèle linéaire généralisé 2.
