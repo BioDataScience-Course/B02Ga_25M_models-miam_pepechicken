@@ -280,7 +280,7 @@ lezards_ml2_2 <- lm(data = lezards, longcrane ~ largcrane * sexe)
 tabularise(summary_(lezards_ml2_2))
 ```
 
-Pour ce modèle, tous les paramètres sont significativement différents de zéro au seuil $\alpha$ de 5%. Le $R^2$ est d'environ 0,77, très faiblement supérieur au précédent (0,76) mais traduis tout de même d'un meileur modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif.
+Pour ce modèle, tous les paramètres sont significativement différents de zéro au seuil $\alpha$ de 5%. Le $R^2$ est d'environ 0,77, très faiblement supérieur au précédent (0,76) mais traduis tout de même d'un bon modèle. Il en est de même pour la valeur de p, étant inférieure à 0,05, indiquant que le modèle est significatif.
 
 ```{r modelelineaire2residus}
 chart$residuals(lezards_ml2_2)
