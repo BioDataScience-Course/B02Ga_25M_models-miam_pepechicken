@@ -365,7 +365,7 @@ La circonférence relative de la queue et la longueur de la queue par rapport à
 
 L’inclusion des mesures du crâne, et notamment l’interaction entre largeur et longueur du crâne, peut améliorer légèrement la précision des modèles de prédiction.
 
-Enfin, nous avons décidé de conserver les 2 modèles linéaires génaralisés car ceux-ci sont les plus pertinents.
+Enfin, nous avons décidé de conserver les 2 modèles linéaires généralisés car ceux-ci sont les plus pertinents. En effet, ces deux modèles sont les plus adéquats à analyser plus en profondeur car ils permettent de comprendre quels sont les paramètres qui sont les plus adéquats pour le sexage des varans.
 
 ## Références
 
